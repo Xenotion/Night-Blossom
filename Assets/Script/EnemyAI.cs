@@ -34,13 +34,18 @@ public class EnemyAI : MonoBehaviour
     bool alreadyAttacked;
     public GameObject projectile;
 
-    //States
-    public float sightRange, attackRange;
+    // Sight
+    public float sightRange, attackRange, viewAngle;
     public bool playerInSightRange, playerInAttackRange;
 
     // Movement
-    public float accelerationCoefficent;
-    public float baseSpeed;
+    public float accelerationCoefficent; // how much the speed increases per second
+    public float baseSpeed; // speed at t0
+    public float secondsToFullSpeed; // how fast the bot can accelerate to full speed
+
+    
+
+   
 
     private void Awake()
     {
@@ -50,14 +55,21 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        
-        //Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+
+        // Check for sight and attack range
+        //playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         //playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-        
-        // can do lazy updates with this
+
+        // TODO: maybe make it chase player based on both sight & sound?
+        playerInSightRange = isPlayerInSight();
+
+        // can do lazy updates with this ?
+
         agent.speed = Time.realtimeSinceStartup * accelerationCoefficent + baseSpeed;
-        // TODO: update acceleration as well?
+        // match acceleration with speed
+        agent.acceleration = agent.speed / secondsToFullSpeed;
+       
+      
 
         if (Time.realtimeSinceStartup - guardingSince > guardTime )
         {
@@ -177,5 +189,26 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    // checks if the player is in the enemy's FOV
+    // function adapted from https://discussions.unity.com/t/how-to-check-if-player-is-inside-enemy-field-of-view-without-rendertexture/244249/2
+    private bool isPlayerInSight()
+    {
+        Vector3 toPlayer = player.transform.position - transform.position;
+        if (Vector3.Angle(transform.forward, toPlayer) <= viewAngle)
+        {
+            if (Physics.Raycast(transform.position, toPlayer, out RaycastHit hit, sightRange))
+            {
+                if (hit.transform.root == player.transform)
+                {
+                    return true;
+                }
+                    
+            }
+        }
+
+        return false;
+
     }
 }
