@@ -110,16 +110,16 @@ public class EnemyAI : MonoBehaviour
     }
     private void SearchWalkPoint()
     {
-        Debug.Log("Search!");
+        // Debug.Log("Search!");
         //Calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
         walkPoint = new Vector3(currentGuardTarget.position.x + randomX, transform.position.y, currentGuardTarget.position.z + randomZ);
-        Debug.Log("current:");
-        Debug.Log(transform.position);
-        Debug.Log("target:");
-        Debug.Log(walkPoint);
+        // Debug.Log("current:");
+        // Debug.Log(transform.position);
+        // Debug.Log("target:");
+        // Debug.Log(walkPoint);
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
@@ -136,7 +136,7 @@ public class EnemyAI : MonoBehaviour
 
     private void ChasePlayer()
     {
-        Debug.Log("Chase player!");
+        // Debug.Log("Chase player!");
         //walkPoint = player.transform.position;
         walkPointSet= false;
         isGuarding= false;
@@ -210,5 +210,27 @@ public class EnemyAI : MonoBehaviour
 
         return false;
 
+    }
+
+    private bool canMove = true;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player")) // Assuming your player has the tag "Player"
+        {
+            other.gameObject.GetComponent<Player>().TakeDamage(1);
+            
+            if (canMove)
+            {
+                canMove = false;
+                agent.isStopped = true; // Stops the NavMeshAgent from moving
+                Invoke("EnableMovement", 2.0f); // Re-enables movement after 5 seconds
+            }
+        }
+    }
+
+    private void EnableMovement()
+    {
+        agent.isStopped = false; // Allows the NavMeshAgent to move again
+        canMove = true;
     }
 }
