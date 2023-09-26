@@ -36,7 +36,7 @@ Shader "Unlit/WaveShader"
 			// Implementation of the vertex shader
 			vertOut vert(vertIn v)
 			{
-				float4 displacement = float4(0.0f,  sin( _Time.y *2.0f) *0.15f, 0.0f, 0.0f);
+				float4 displacement = float4(sin( _Time.y *4.0f + v.vertex.y*1.5f) *0.04f -0.025f, sin( _Time.y *4.0f + v.vertex.x*1.5f) *0.01f -0.01f, sin( _Time.y *4.0f + v.vertex.y*1.5f)*0.01f, 0.0f);
 				v.vertex += displacement;
 				vertOut o;
 
