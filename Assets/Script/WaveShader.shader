@@ -5,6 +5,7 @@ Shader "Unlit/WaveShader"
 	Properties
 	{
     	_Color ("Material Color", Color) = (0, 0, 0, 1.0)
+
 	}
 	SubShader
 	{
@@ -18,19 +19,20 @@ Shader "Unlit/WaveShader"
 
 			#include "UnityCG.cginc"
 			uniform float4 _Color;
-	
 		
 
 			struct vertIn
 			{
 				float4 vertex : POSITION;
 				float2 uv : TEXCOORD0;
+			
 			};
 
 			struct vertOut
 			{
 				float4 vertex : SV_POSITION;
 				float2 uv : TEXCOORD0;
+				
 			};
 
 			// Implementation of the vertex shader
