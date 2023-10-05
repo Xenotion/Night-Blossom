@@ -60,7 +60,6 @@ public class Dialogue : MonoBehaviour
 
         void NextLine()
         {
-        playerMovement.canMove = true;
 
         if (index < lines.Length - 1)
             {
@@ -71,7 +70,9 @@ public class Dialogue : MonoBehaviour
             else
             {
                 gameObject.SetActive(false);
-            }
+                playerMovement.canMove = true;
+
+        }
 
     }
 }
