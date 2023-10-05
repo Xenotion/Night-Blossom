@@ -217,7 +217,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) // Assuming your player has the tag "Player"
         {
-            other.gameObject.GetComponent<Player>().TakeDamage(1, transform.position);
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(1, transform.position);
             
             if (canMove)
             {

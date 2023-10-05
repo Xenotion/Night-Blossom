@@ -7,8 +7,11 @@ public class Timer : MonoBehaviour
     private float remainingTime;
     private TextMeshProUGUI timerText; // Using TextMeshProUGUI instead of Text
 
+    public TMP_Text victoriyText;
+
     private void Start()
     {
+        victoriyText.gameObject.SetActive(false);
         remainingTime = timerDuration;
         timerText = GetComponent<TextMeshProUGUI>(); // Get TextMeshProUGUI component
     }
@@ -32,6 +35,6 @@ public class Timer : MonoBehaviour
     private void TimerEnded()
     {
         timerText.text = "Time's Up!";
-        // Implement additional actions here
+        victoriyText.gameObject.SetActive(true);
     }
 }
