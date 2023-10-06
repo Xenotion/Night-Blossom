@@ -1,7 +1,8 @@
-
+﻿
 
 
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -43,7 +44,12 @@ public class EnemyAI : MonoBehaviour
     public float baseSpeed; // speed at t0
     public float secondsToFullSpeed; // how fast the bot can accelerate to full speed
 
-    
+    // Effects
+    private float stunnedSince;
+    private float stunDuration = 0;
+    private bool isStunned;
+
+    public GameObject stunParticles;
 
    
 
@@ -51,10 +57,18 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("First Person Player").transform; 
         agent = GetComponent<NavMeshAgent>();
+        stunParticles.SetActive(false);
     }
 
     private void Update()
     {
+        UpdateEffects();
+        // handle stun
+        if (isStunned)
+        {
+            return; //skip all actions
+            
+        }
 
         // Check for sight and attack range
         //playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
@@ -88,6 +102,40 @@ public class EnemyAI : MonoBehaviour
         //if (playerInAttackRange && playerInSightRange) AttackPlayer();
 
      
+    }
+
+    // Stuns the enemy, allows extending 
+    public void Stun(float seconds)
+    {
+        if (!isStunned)
+        {
+            isStunned = true;
+            stunnedSince = Time.realtimeSinceStartup;
+        }
+
+
+        stunDuration += seconds;
+    }
+
+    // handle all potential effects
+    private void UpdateEffects()
+    {
+        if (isStunned) {
+            if (Time.realtimeSinceStartup - stunnedSince > stunDuration)
+            {
+                isStunned = false;
+                stunDuration = 0;
+                stunParticles.SetActive(false);
+            }
+            else
+            {
+                agent.speed = 0;
+                stunParticles.SetActive(true);
+                stunParticles.transform.position = transform.position;
+            }
+
+        }
+        
     }
 
     private void Patroling()
@@ -218,13 +266,16 @@ public class EnemyAI : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) // Assuming your player has the tag "Player"
         {
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(1, transform.position);
-            
+
+            Stun(5.0f); // this is not as elegant, but more flexible?
+            /* 
             if (canMove)
             {
-                canMove = false;
+                canMove ＝ false；
                 agent.isStopped = true; // Stops the NavMeshAgent from moving
                 Invoke("EnableMovement", 2.0f); // Re-enables movement after 5 seconds
             }
+            */
         }
     }
 
