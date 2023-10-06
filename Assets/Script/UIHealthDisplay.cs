@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIHealthDisplay : MonoBehaviour
 {
-    public Player player; // Assign your player object with the health system in the inspector
+    public PlayerHealth player; // Assign your player object with the health system in the inspector
     public Image[] hearts; // Assign your heart images in the inspector, make sure it's in order
     
     void Update()
