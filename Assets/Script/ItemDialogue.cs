@@ -10,10 +10,17 @@ public class ItemDialogue : MonoBehaviour
     private int index;
     private bool isPlayerNear = false;
 
+
+
+
+
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player entered trigger!");
             isPlayerNear = true;
             StartDialogue();
         }
@@ -37,8 +44,9 @@ public class ItemDialogue : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player exited trigger!");
             isPlayerNear = false;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 
@@ -47,6 +55,7 @@ public class ItemDialogue : MonoBehaviour
         index = 0;
         StartCoroutine(TypeLine());
     }
+
 
     IEnumerator TypeLine()
     {
