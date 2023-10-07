@@ -23906,7 +23906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerDuration: 300
-  victoriyText: {fileID: 636738336}
+  victoryText: {fileID: 636738336}
 --- !u!114 &1107944383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26353,6 +26353,7 @@ MonoBehaviour:
   - {fileID: 1522471284}
   - {fileID: 1739265592}
   - {fileID: 640790707}
+  timer: {fileID: 1107944382}
 --- !u!1001 &1237512370
 PrefabInstance:
   m_ObjectHideFlags: 0
