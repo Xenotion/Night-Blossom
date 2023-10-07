@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -20f;
     public float jumpHeight = 1.5f;
     public Transform groundCheck;
-    public float groundDistance = 0.4f;
+    public float groundDistance = 1.5f;
     public LayerMask groundMask;
     public bool canMove = true;
 
