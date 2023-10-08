@@ -50,6 +50,8 @@ Some qualifying criterias will be:
 **Previous gaming experience**: Whether or not they regularly play games or not <br>
 **Interest in the horror genre**: This is important as this is our target audience
 
+Target audience is those who love survival horror games with an emphasis on narrative. Ensure participants have played at least one game from the genre in the past year. They should range from casual to hardcore gamers to capture a broad spectrum of feedback.
+
 ---
 
 ### Data collection: What sort of data is being collected? How will you collect the data? What tools will you use?
