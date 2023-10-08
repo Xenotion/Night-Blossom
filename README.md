@@ -22,7 +22,7 @@ placeholder for it [here](GDD.md).
 
 ## Evaluation Plan
 
-### Goals with evaluation
+### 1.0 Goals with evaluation
 
 The primary objective of this evaluation is to enhance the game by taking insights from real-life players. During the development stage, particular bugs or issues can be overlooked and this evaluation serves as a mechanism to identify, address and improve upon them.
 
@@ -30,7 +30,7 @@ Furthermore we seek to enhance the overall entertainment value of the game itsel
 
 --- 
 
-### Evaluation techniques: Which evaluation techniques will you use and why? What tasks will you ask participants to perform?
+### 2.0 Evaluation techniques: Which evaluation techniques will you use and why? What tasks will you ask participants to perform?
 
 In order to comprehensively evaluate the game we will employ a range of assessment techniques. 
 Players will rate their fear levels during gameplay and provide a gauge for the games immersion and suspenseful elements. 
@@ -40,7 +40,7 @@ Play testing will be done where players can provide insights. Play tests can be 
 
 ---
 
-### Participants: How will you recruit participants? What qualifying criteria will you use to ensure that they are representative of your target audience?
+### 3.0 Participants: How will you recruit participants? What qualifying criteria will you use to ensure that they are representative of your target audience?
 
 Our game follows a horror theme and due to this we aim for an older audience that likes the fear factor. We aim to find participants through friends and family as well as possibly online on online gaming forums that are horror themed targeted. 
 
@@ -54,7 +54,7 @@ Target audience is those who love survival horror games with an emphasis on narr
 
 ---
 
-### Data collection: What sort of data is being collected? How will you collect the data? What tools will you use?
+### 4.0 Data collection: What sort of data is being collected? How will you collect the data? What tools will you use?
 
 We will collect data on these certain features:
 
@@ -70,24 +70,24 @@ Tools we will be using include Unity Analytics for in-game data, and SurveyMonke
 
 ---
 
-### Data analysis: How will you analyse the data? What metrics will you use to evaluate your game, and provide a basis for making changes?
+### 5.0 Data analysis: How will you analyse the data? What metrics will you use to evaluate your game, and provide a basis for making changes?
 
 Metrics will be evaluated accordingly:
 
-**Quantitative Analysis** <br>
+**5.1 Quantitative Analysis** <br>
 Survival rate: Percentage of players able to complete game <br>
 Fear ratings: Whether or not they found it suspenseful and scary <br>
 Satisfaction: Average rating of game <br>
 Number of tries to complete <br>
 Number of items collected <br>
 
-**Qualitative Analysis** <br>
+**5.2 Qualitative Analysis** <br>
 Categorise feedback into themes (prioritise based on frequency and severity of issues mentioned) <br>
 Gameplay <br>
 Story <br>
 Graphics <br>
 
-**Metrics** <br>
+**5.3 Metrics** <br>
 Player retention rate <br>
 Overall satisfaction score <br>
 Perceived difficulty level <br>
@@ -97,7 +97,7 @@ According to these we will analyse the data and identify patterns or key areas t
 
 ---
 
-### Timeline: What is your timeline for completing the evaluation? When will you make changes to the game?
+### 6.0 Timeline: What is your timeline for completing the evaluation? When will you make changes to the game?
 
 **Day 1-2**: Recruitment and evaluation of participants <br>
 **Day 3-4**: Gameplay sessions and data collection <br>
@@ -106,9 +106,9 @@ According to these we will analyse the data and identify patterns or key areas t
 
 ---
 
-### Responsibilities: Who is responsible for each task? How will you ensure that everyone contributes equally?
+### 7.0 Responsibilities: Who is responsible for each task? How will you ensure that everyone contributes equally?
 
-#### Evaluation organisation: 
+#### 7.1 Evaluation organisation: 
 
 Playtesting: Game testers and volunteer participants.
 
@@ -120,7 +120,7 @@ Participant recruitment: Natasha Ngo
 
 Implementation of Changes: Developers/ Full team members
 
-#### Organisation for code and game changes: 
+#### 7.2 Organisation for code and game changes: 
 
 The work will be distributed into 3 parts which will be allocated accordingly. 
 
