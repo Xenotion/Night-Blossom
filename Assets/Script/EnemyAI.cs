@@ -43,6 +43,7 @@ public class EnemyAI : MonoBehaviour
     public float accelerationCoefficent; // how much the speed increases per second
     public float baseSpeed; // speed at t0
     public float secondsToFullSpeed; // how fast the bot can accelerate to full speed
+    public float startAccelerationTime;
 
     // Effects
     private float stunnedSince;
@@ -58,6 +59,7 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.Find("First Person Player").transform; 
         agent = GetComponent<NavMeshAgent>();
         stunParticles.SetActive(false);
+        ResetSpeed();
     }
 
     private void Update()
@@ -79,7 +81,7 @@ public class EnemyAI : MonoBehaviour
 
         // can do lazy updates with this ?
 
-        agent.speed = Time.realtimeSinceStartup * accelerationCoefficent + baseSpeed;
+        agent.speed = (Time.realtimeSinceStartup - startAccelerationTime) * accelerationCoefficent + baseSpeed;
         // match acceleration with speed
         agent.acceleration = agent.speed / secondsToFullSpeed;
        
@@ -115,6 +117,11 @@ public class EnemyAI : MonoBehaviour
 
 
         stunDuration += seconds;
+    }
+
+    // resets the speed to the initial value
+    public void ResetSpeed(){
+        startAccelerationTime = Time.realtimeSinceStartup;
     }
 
     // handle all potential effects
