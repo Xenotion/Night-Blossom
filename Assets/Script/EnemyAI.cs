@@ -51,7 +51,6 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject stunParticles;
 
-   
 
     private void Awake()
     {
@@ -284,4 +283,5 @@ public class EnemyAI : MonoBehaviour
         agent.isStopped = false; // Allows the NavMeshAgent to move again
         canMove = true;
     }
+
 }

@@ -8,7 +8,8 @@ public class FogScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -16,5 +17,9 @@ public class FogScript : MonoBehaviour
     {
         // follows the player
         transform.position = new Vector3(player.position.x, player.position.y + 20f, player.position.z);
+    }
+
+    public void setActive() { 
+        gameObject.SetActive(true);
     }
 }
