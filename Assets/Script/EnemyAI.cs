@@ -52,6 +52,10 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject stunParticles;
 
+    // spawning
+    public Transform spawnPoint;
+    bool spawned;
+
 
     private void Awake()
     {
@@ -59,13 +63,14 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         stunParticles.SetActive(false);
         ResetSpeed();
+        spawned = false;
     }
 
     private void Update()
     {
         UpdateEffects();
         // handle stun
-        if (isStunned)
+        if (isStunned || !spawned)
         {
             return; //skip all actions
             
@@ -103,6 +108,14 @@ public class EnemyAI : MonoBehaviour
         //if (playerInAttackRange && playerInSightRange) AttackPlayer();
 
      
+    }
+
+    public void Spawn(){
+        if(!spawned){
+            Debug.Log(agent.Warp(spawnPoint.position));
+            spawned = true;
+            Debug.Log("Enemy Spawned!");
+        }
     }
 
     // Stuns the enemy, allows extending 
