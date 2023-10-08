@@ -8,30 +8,25 @@ public class ItemDialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
-    private bool isPlayerNear = false;
+    private bool dialogueStarted = false;
 
-
-
-
-
-
-
-    void OnTriggerEnter(Collider other)
+    void Start()
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player entered trigger!");
-            isPlayerNear = true;
-            StartDialogue();
-        }
+        gameObject.SetActive(false);
+        textComponent.text = string.Empty;
+
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (isPlayerNear && Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && dialogueStarted)
         {
             if (textComponent.text == lines[index])
+            {
                 NextLine();
+            }
             else
             {
                 StopAllCoroutines();
@@ -40,22 +35,11 @@ public class ItemDialogue : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player exited trigger!");
-            isPlayerNear = false;
-            //gameObject.SetActive(false);
-        }
-    }
-
     void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
     }
-
 
     IEnumerator TypeLine()
     {
@@ -76,7 +60,16 @@ public class ItemDialogue : MonoBehaviour
         }
         else
         {
+            // Should remove the dialogue box at end of text..?
             gameObject.SetActive(false);
         }
     }
+
+    public void setActive()
+    {
+        gameObject.SetActive(true);
+        dialogueStarted = true;
+        StartDialogue();
+    }
+
 }
