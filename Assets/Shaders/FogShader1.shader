@@ -1,4 +1,4 @@
-﻿﻿// https://jakobknudsen.wordpress.com/2013/08/06/altitude-fog/
+﻿﻿// copied from https://jakobknudsen.wordpress.com/2013/08/06/altitude-fog/ for learning purposes, not part of submission
 
 Shader "FogShader1"
 {
