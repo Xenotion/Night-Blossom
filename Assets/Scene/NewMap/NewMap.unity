@@ -24412,7 +24412,6 @@ GameObject:
   - component: {fileID: 1100884209}
   - component: {fileID: 1100884208}
   - component: {fileID: 1100884207}
-  - component: {fileID: 1100884206}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: PickupObject
@@ -24420,21 +24419,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1100884206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100884205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a94f8bbf4053a45c8878b5f346140990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  directionalLight: {fileID: 962666131}
-  colorWhenPickedUp: {r: 1, g: 0, b: 0, a: 1}
-  handPosition: {fileID: 264171680}
 --- !u!135 &1100884207
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27118,6 +27102,8 @@ MonoBehaviour:
   - {fileID: 1739265592}
   - {fileID: 640790707}
   timer: {fileID: 1107944382}
+  directionalLight: {fileID: 962666131}
+  colorWhenItemPlaced: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &1237512370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46059,7 +46045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6215356684312488400, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6215356684312488400, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_StaticEditorFlags
