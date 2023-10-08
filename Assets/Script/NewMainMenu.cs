@@ -1,12 +1,20 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewMainMenu : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    public void PlayGame()
+    public void LoadGameScene()
     {
-        SceneManager.LoadSceneAsync("NewMap");
+        StartCoroutine(AsyncLoadGameScene());
+    }
+
+    IEnumerator AsyncLoadGameScene()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("NewMap", LoadSceneMode.Single);
+        while (!asyncOperation.isDone)
+        {
+            yield return null; // Wait until the scene finishes loading
+        }
     }
 }
