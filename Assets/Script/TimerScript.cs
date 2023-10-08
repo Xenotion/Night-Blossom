@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -42,5 +43,10 @@ public class Timer : MonoBehaviour
     {
         timerText.text = "Time's Up!";
         victoryText.gameObject.SetActive(true);
+    }
+
+    public bool getIsTimerRunning() {
+        return isTimerRunning;
+
     }
 }

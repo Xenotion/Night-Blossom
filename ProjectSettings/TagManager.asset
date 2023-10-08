@@ -8,6 +8,8 @@ TagManager:
   - Table
   - Enemy
   - DialogueObject
+  - Appear
+  - Disappear
   layers:
   - Default
   - TransparentFX
