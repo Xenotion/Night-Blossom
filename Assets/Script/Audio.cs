@@ -21,11 +21,6 @@ public class AudioManager : MonoBehaviour
 
                 hasTriggered = true;
             }
-            else
-            {
-
-                hasTriggered = false;
-            }
         }
     }
 }
