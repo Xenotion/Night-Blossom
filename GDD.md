@@ -310,7 +310,9 @@ Reason: GitHub is an industry-standard tool for version control. It not only all
 
 ## 8.0 Team Communication, Timelines and Task Assignment
 
-
+<p align="middle">
+  <img src="Images/Trello Organisation.png" width="400">
+</p>
 
 #### 8.1 Communication Channels:
 Facebook Messenger:
