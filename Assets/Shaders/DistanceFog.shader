@@ -1,11 +1,11 @@
 ﻿//https://docs.unity3d.com/Manual/SL-SurfaceShaders.html
-Shader "FogShader"
+Shader "DistanceFog"
 {
 	Properties {
          _Color ("Material Color", Color) = (0, 0, 0, 1.0)
-        _FogColor ("Fog Color", Color) = (0.3, 0.4, 0.7, 1.0)
-        _FogStartDistance ("Fog Start Distance", Range(0, 100)) = 10.0
-        _FogEndDistance ("Fog End Distance", Range(0, 100)) = 50.0
+        _FogColor ("Fog Color", Color) = (0.0, 0.0, 0.0, 1.0)
+        _FogStartDistance ("Fog Start Distance", Range(0, 100)) = 20.0
+        _FogEndDistance ("Fog End Distance", Range(0, 100)) = 100.0
     }
     SubShader {
         Tags { "RenderType" = "Opaque" }

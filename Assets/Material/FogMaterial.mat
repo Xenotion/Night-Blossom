@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FogMaterial
-  m_Shader: {fileID: 4800000, guid: 003849693f9aefe4fb778078b016a792, type: 3}
+  m_Shader: {fileID: 4800000, guid: db57e3f03d22d6545a48e8854d747801, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,6 +24,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlbedoTex1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlbedoTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -45,10 +53,22 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 80b7da75141e8414387fd3593a172a09, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MirrorReflectionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -66,6 +86,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Albedo2Flow: 1
+    - _Albedo2Tiling: 1
+    - _AlbedoContrast: 1
+    - _AlbedoIntensity: 1
     - _Alpha: 1
     - _AtmosphereThickness: 1
     - _BumpScale: 1
@@ -86,10 +110,23 @@ Material:
     - _Kd: 1
     - _Ks: 1
     - _Metallic: 0
+    - _MicrowaveScale: 1
+    - _MicrowaveStrength: 0.5
+    - _MirrorFPOW: 5
+    - _MirrorR0: 0.01
     - _Mode: 0
+    - _NormalMap1Strength: 1
+    - _NormalMap2Flow: 0.5
+    - _NormalMap2Strength: 1
+    - _NormalMap2Tiling: 1.2
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ParallaxAmount: 0.1
+    - _ParallaxFlow: 1
+    - _ParallaxMapTiling: 1
+    - _ParallaxNormal2Offset: 1
     - _SmoothnessTextureChannel: 0
+    - _SoftFactor: 0.5
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SunDisk: 2
@@ -99,10 +136,13 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Albedo: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+    - _AlbedoColor: {r: 0.15, g: 0.161, b: 0.16, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FogColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FogColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    - _MirrorColor: {r: 1, g: 1, b: 1, a: 0.5}
+    - _MirrorDepthColor: {r: 0, g: 0, b: 0, a: 0.5}
     - _SkyTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []

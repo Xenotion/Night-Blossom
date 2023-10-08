@@ -80,7 +80,7 @@ Material:
     - _DstBlend: 0
     - _EmissionEnabled: 0
     - _FlipbookMode: 0
-    - _FogEndDistance: 11.3
+    - _FogEndDistance: 10.6
     - _FogStartDistance: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
