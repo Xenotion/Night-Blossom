@@ -3,29 +3,28 @@
 # that you only replace the placeholder text, not the keys (e.g. TeamName, etc.)
 
 # 1. Your team's GitHub repository URL for project 2 (*not* project 1)
-RepoURL: https://github.com/COMP30019/...
+RepoURL: https://github.com/COMP30019/project-2-slay
 
 # 2. Since you are working in the same team for project 2, you should copy the
 #    below keys/values *verbatim* from your project 1 metadata.yml -- do not
 #    change them unless you have permission from the teaching team.
-TeamName: <team name>
+TeamName: Slay
 TeamMembers:
-  - Name: <student name 1>
-    Email: ...@student.unimelb.edu.au
-  - Name: <student name 2>
-    Email: ...@student.unimelb.edu.au
-  - Name: <student name 3>
-    Email: ...@student.unimelb.edu.au
-  - Name: <student name 4>
-    Email: ...@student.unimelb.edu.au
+  - Name: Natasha Ngo
+    Email: ngonn@student.unimelb.edu.au
+  - Name: John An
+    Email: junghyuna@student.unimelb.edu.au
+  - Name: Kaiyuan Cui
+    Email: kaicui@student.unimelb.edu.au
 
 # 3. The below keys must be filled out by the given milestone deadlines, and
 #    you must also re-submit on Gradescope to register these changes officially
 #    (like in project 1). Read the specification for details.
 
 # Milestone 1 entries
-GameTitle: <your game title>
-GameBlurb: <a short description of your game (max 200 words)>
+GameTitle: Night Blossom
+GameBlurb: The Night Blossom is a first person survival horror game in which players must test their ability to work quickly and intelligently to outspeed a pursuing creature. The player is a human who’s job is to escape and survive through completing a set of tasks before they are caught.
 
 # Milestone 2 entries
 GameplayVideo: <a link to your YouTube video>
+ 
