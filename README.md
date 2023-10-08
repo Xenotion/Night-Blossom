@@ -108,13 +108,30 @@ According to these we will analyse the data and identify patterns or key areas t
 
 ### Responsibilities: Who is responsible for each task? How will you ensure that everyone contributes equally?
 
+#### Evaluation organisation: 
+
 Playtesting: Game testers and volunteer participants.
 
-Feedback Collection: Full team members
+Feedback Collection: Kaiyuan Cui
 
-Data Analysis: Full team members
+Data Analysis: John An
 
-Implementation of Changes: Developers
+Participant recruitment: Natasha Ngo
+
+Implementation of Changes: Developers/ Full team members
+
+#### Organisation for code and game changes: 
+
+The work will be distributed into 3 parts which will be allocated accordingly. 
+
+MonsterAI: Kaiyuan Cui
+
+Quality of Life/Game immersion: Natasha Ngo
+
+Game mechanics: John An
+
+This allows for even contribution and members will help and contribute to the other parts when needed. We will ensure everyone has similarly distributed workload by actively communicating about the workflow and the progress to make sure no one is over/underworking during the evaluation process.
+
 
 ## Evaluation Report
 
