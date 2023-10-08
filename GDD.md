@@ -89,12 +89,9 @@ The game offers a first-person perspective, immersing players directly into the 
 
 #### 3.2 Controls:
 
-- W, A, S, D (or arrow keys): Movement controls.
+- W, A, S, D: Movement controls.
 - Q, E: peeking mechanism 
 - Mouse: Look around/aim.
-- Middle mouse button: scroll through inventory left and right
-- Left Mouse Button: Interact with objects/pick up items.
-- Right Mouse Button: Use ability
 - F: Interact with an object
 - Spacebar: Jump.
 - Shift: Run (limited stamina to prevent overuse).
@@ -131,8 +128,6 @@ Time Survival: A persistent 5-minute timer. The urgency pushes players to act qu
 **Puzzle-solving**: Ranging from simple object placements to deciphering cryptic messages. Some puzzles might require players to recall earlier details or backtrack to previously explored areas.
 
 **Stealth**: players need to avoid detection, using the environment to hide or player can peek around the corner to check for surroundings without being detected even if the player is in a line of sight of the villain
-
-**Inventory Management**: Players collect essential items to escape. They need to manage these items, deciding when and how to use them.
 
 **Lore Collection**: Optional collectibles that provide insights into the game's backstory. These also serve as indirect hints for some puzzles.
 
@@ -260,9 +255,6 @@ https://www.youtube.com/watch?v=_ovvWMq2SKw
 **Main HUD (Head-Up Display) during gameplay:**
 
 **Stamina Bar**: A thin, translucent bar at the bottom-left corner that depletes as the player runs. It's designed to look like an ink-brush stroke, fading as stamina decreases.
-
-
-**Inventory Bar**: A series of boxes will be located at the bottom of the screen. When a player gathers an item, it will automatically appear in the inventory and the player can select an item by scrolling through the inventory bar. Selected item box will be highlighted.
 	
 Main HUD will follow the generic aesthetic of the usual game Minecraft’s UI as It tends to contain all the necessary information with simplicity. However, we plan on changing the overall UI aesthetics to a more subtle horror theme with less rigidity to give the player a sense of unbalance and lurking fear while playing the game. 
 
@@ -291,7 +283,6 @@ Each option, when hovered over, will be highlighted in a certain manner.
   - Options
   - Main Menu
   - Quit
-
 
 
 The overall menu options aesthetic will follow as  with the subtle white and glowy text with interesting font creates a vibe that can potentially make the player uncomfortable before starting the game. However, we are planning on giving the menu UI a twist where the major aesthetic will be pleasant and oriental, while hiding hints of contrasting elements to contain the overall theme of the game. We will be incorporating a lot of asian/japanese theme design which represents the game’s direction. 
