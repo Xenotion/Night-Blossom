@@ -4,15 +4,19 @@ public class PickupObject : MonoBehaviour
 {
     public Transform handPosition;
     public float interactionRange = 3f;
+    private EnemyAI enemy;
+
     private GameObject heldItem;
 
     private Camera playerCamera;
+    
     private Table table;
 
     private void Start()
     {
         playerCamera = GetComponentInChildren<Camera>();
         table = FindObjectOfType<Table>();
+        enemy = FindObjectOfType<EnemyAI>();
     }
 
     void Update()
@@ -62,6 +66,13 @@ public class PickupObject : MonoBehaviour
         {
             heldItem.transform.SetParent(null);
             heldItem = null;
+            DebuffEnemy();
         }
+    }
+
+    // apply debuff to enemy, can add more logic in here to allow different debuffs etc.
+    void DebuffEnemy(){
+        enemy.Stun(10.0f);
+        enemy.ResetSpeed();
     }
 }
