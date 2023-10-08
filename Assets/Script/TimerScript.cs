@@ -47,6 +47,5 @@ public class Timer : MonoBehaviour
 
     public bool getIsTimerRunning() {
         return isTimerRunning;
-
     }
 }
