@@ -12,7 +12,7 @@ Shader "FogMaterialShader"
 
 		// affects how the effects changes over distance
 		// function = 2^ k(d-c)
-		_K("Distance Function - k", Range(-5,5)) = 1
+		_K("Distance Function - k", Range(0,20)) = 1
 		_C("Distance Function - c", Range(-5,5)) = 7
 	}
 	SubShader
