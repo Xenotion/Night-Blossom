@@ -16,7 +16,7 @@ public class FogScript : MonoBehaviour
     void Update()
     {
         // follows the player
-        transform.position = new Vector3(player.position.x, player.position.y + 20f, player.position.z);
+        transform.position = new Vector3(player.position.x, player.position.y, player.position.z);
     }
 
     public void setActive() { 
