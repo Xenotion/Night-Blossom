@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 30f;
     public float leanAmount = 15f; // Amount to lean
     public float leanSpeed = 5f;  // Speed of the leaning transition
 
