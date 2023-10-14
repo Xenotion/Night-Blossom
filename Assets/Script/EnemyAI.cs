@@ -25,15 +25,11 @@ public class EnemyAI : MonoBehaviour
     public float walkPointRange;
 
     // Guarding
-    public Transform currentGuardTarget;
+    private Transform currentGuardTarget;
     public float guardTime;
     float guardingSince;
     bool isGuarding;
 
-    //Attacking
-    public float timeBetweenAttacks;
-    bool alreadyAttacked;
-    public GameObject projectile;
 
     // Sight
     public float sightRange, attackRange, viewAngle;
@@ -44,6 +40,7 @@ public class EnemyAI : MonoBehaviour
     public float baseSpeed; // speed at t0
     public float secondsToFullSpeed; // how fast the bot can accelerate to full speed
     public float startAccelerationTime;
+
 
     // Effects
     private float stunnedSince;
@@ -56,6 +53,12 @@ public class EnemyAI : MonoBehaviour
     public Transform spawnPoint;
     bool spawned;
 
+    // teleport
+    private Vector3 teleportPoint;
+
+    // rage mode
+    private bool enraged = false;
+    public float enrageSpeed = 15; // speed at which the enemy will become enraged
 
     private void Awake()
     {
@@ -88,26 +91,62 @@ public class EnemyAI : MonoBehaviour
         agent.speed = (Time.realtimeSinceStartup - startAccelerationTime) * accelerationCoefficent + baseSpeed;
         // match acceleration with speed
         agent.acceleration = agent.speed / secondsToFullSpeed;
+
+        if(agent.speed > enrageSpeed && !enraged){
+            Enrage();
+        }
        
-      
 
-        if (Time.realtimeSinceStartup - guardingSince > guardTime )
-        {
-            isGuarding = false; // guard new target
+        if(enraged){
+            // rage mode, always chase player
+            ChasePlayer();
 
         }
-        if (playerInSightRange )
-        {
-            ChasePlayer(); // priority
+        else{
+            // normal mode, patrol and chase player on sight
+            if (Time.realtimeSinceStartup - guardingSince > guardTime )
+            {
+                isGuarding = false; // guard new target
+
+            }
+            if (playerInSightRange )
+            {
+                ChasePlayer(); // priority
+            }
+            else
+            {
+                Patroling();
+            }
+
         }
-        else
-        {
-            Patroling();
-        }
+        
      
         //if (playerInAttackRange && playerInSightRange) AttackPlayer();
 
+
+    }
+
+    // teleports to the point set
+    private void Teleport(){
+        agent.Warp(teleportPoint);
      
+    }
+
+    // in {seconds} seconds, teleport to the player's current position
+    public void TeleportBehindPlayer(float seconds){
+        if(spawned){
+            teleportPoint = player.position;
+            Invoke("Teleport", seconds);
+        };
+        
+    }
+
+    public void Enrage(){
+        if(!enraged){
+            enraged = true;
+            TeleportBehindPlayer(2);
+        }
+        
     }
 
     public void Spawn(){
@@ -115,6 +154,8 @@ public class EnemyAI : MonoBehaviour
             Debug.Log(agent.Warp(spawnPoint.position));
             spawned = true;
             Debug.Log("Enemy Spawned!");
+
+            //TeleportBehindPlayer(5);
         }
     }
 
@@ -127,7 +168,7 @@ public class EnemyAI : MonoBehaviour
             stunnedSince = Time.realtimeSinceStartup;
         }
 
-
+        enraged = false;
         stunDuration += seconds;
     }
 
@@ -195,7 +236,13 @@ public class EnemyAI : MonoBehaviour
     {
         // TODO: can change to based on distance
     
-        currentGuardTarget = guardTargets[Random.Range(0, guardTargets.Count)];
+        Transform target = guardTargets[Random.Range(0, guardTargets.Count)];
+        SetGuardTarget(target);
+        
+    }
+
+    public void SetGuardTarget(Transform target){
+        currentGuardTarget = target;
         isGuarding= true;
         walkPointSet = false; // reset walkPoint
         guardingSince = Time.realtimeSinceStartup;
@@ -214,30 +261,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.transform.position);
     }
 
-    // we might add attacks later
-    private void AttackPlayer()
-    {
-        //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
-
-        transform.LookAt(player);
-
-        if (!alreadyAttacked)
-        {
-            ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            ///End of attack code
-
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
-    }
-    private void ResetAttack()
-    {
-        alreadyAttacked = false;
-    }
+   
 
     public void TakeDamage(int damage)
     {
