@@ -6,10 +6,18 @@ Shader "FogMaterialShader"
 	{
 		_Color("Color", Color) = (0,0,0,0)
         _FadeColor("Fade Color", Color) = (1, 1, 1, 1)
-        _FadeLength("Fade Length", Range(0, 100)) = 0.15
+        _FadeLength("Fade Length", Range(0, 1000)) = 0.15
 	}
 	SubShader
 	{
+		Blend SrcAlpha OneMinusSrcAlpha
+        ZWrite On
+
+        Tags
+        {
+            "RenderType" = "Transparent"
+            "Queue" = "Transparent"
+        }
         CULL OFF
 		Pass
 		{
@@ -55,15 +63,19 @@ Shader "FogMaterialShader"
 			{
                 float2 screenuv = v.vertex.xy / _ScreenParams.xy;
                 float screenDepth = Linear01Depth(tex2D(_CameraDepthTexture, screenuv));
+				 // diff between original texture and the current fragment
                 float diff = screenDepth - Linear01Depth(v.vertex.z);
-                 float intersect = 0;
+                float intersect = 0;
 
                 if(diff > 0)
+					// value between 0 and 1
                     intersect = 1 - smoothstep(0, _ProjectionParams.w * _FadeLength, diff);
 
-                fixed4 glowColor = fixed4(lerp(_Color.rgb, _FadeColor, pow(intersect, 4)), 1); 
-                fixed4 col = _Color * _Color.a + glowColor;
-                col.a = _Color.a;  
+				float fadeFactor = pow(intersect,4);
+                fixed4 fadeColor = fixed4(lerp(_Color.rgb, _FadeColor, fadeFactor), 1); 
+                fixed4 col =  fadeColor;
+                col.a = _Color.a * (1-fadeFactor); 
+				
 				return col;
 			}
 			ENDCG

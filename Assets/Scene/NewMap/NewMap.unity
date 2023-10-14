@@ -46950,7 +46950,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3941490576567361985, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3941490576567361985, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_ReceiveShadows
@@ -46978,15 +46978,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6762405940541627566, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 30.000002
       objectReference: {fileID: 0}
     - target: {fileID: 6762405940541627566, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 30.000002
       objectReference: {fileID: 0}
     - target: {fileID: 6762405940541627566, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 30.000002
       objectReference: {fileID: 0}
     - target: {fileID: 6762405940541627566, guid: c75f4a775c2ab9d459e668a400f97f29, type: 3}
       propertyPath: m_LocalPosition.x
