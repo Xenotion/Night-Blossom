@@ -46,6 +46,9 @@ public class PickupObject : MonoBehaviour
         pickedObject.transform.position = handPosition.position;
         pickedObject.transform.localRotation = Quaternion.identity;
 
+        // teleport enemy to player after object pickup
+        enemy.Enrage();
+
         // Deactivate the object's physics if it has any, so it doesn't interfere while being held.
         Rigidbody rb = pickedObject.GetComponent<Rigidbody>();
         if (rb)
