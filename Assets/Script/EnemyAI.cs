@@ -148,7 +148,7 @@ public class EnemyAI : MonoBehaviour
     public void Enrage(){
         if(!enraged){
             enraged = true;
-            TeleportBehindPlayer(2);
+            TeleportBehindPlayer(5);
         }
         
     }
