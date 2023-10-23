@@ -48,6 +48,7 @@ public class EnemyAI : MonoBehaviour
     private bool isStunned;
 
     public GameObject stunParticles;
+    public GameObject PortalEffect;
 
     // spawning
     public Transform spawnPoint;
@@ -129,14 +130,17 @@ public class EnemyAI : MonoBehaviour
     // teleports to the point set
     private void Teleport(){
         agent.Warp(teleportPoint);
-     
+        PortalEffect.transform.position = new Vector3 (0,0,0); // reset portal position
     }
 
     // in {seconds} seconds, teleport to the player's current position
     public void TeleportBehindPlayer(float seconds){
+        
         if(spawned){
+            PortalEffect.transform.position = player.position;
             teleportPoint = player.position;
             Invoke("Teleport", seconds);
+             
         };
         
     }
