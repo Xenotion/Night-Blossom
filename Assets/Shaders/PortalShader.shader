@@ -81,7 +81,9 @@ Properties
                 o.grabCoord =  ComputeGrabScreenPos(o.vertex);
                 // o.grabcoord = (float2(o.vertex.x, o.vertex.y * -1 ) +o.vertex.w) * 0.5;
               
-                o.grabCoord +=  float4(sin(_Time.y *_DistortionSpeedX + o.grabCoord.y*_DistortionFreqX) *_DistortionScaleX, sin(_Time.y *_DistortionSpeedY + o.grabCoord.x*_DistortionFreqY) *_DistortionScaleY, 0, 0);
+                o.grabCoord +=  float4(sin(_Time.y *_DistortionSpeedX + o.grabCoord.y*_DistortionFreqX) *_DistortionScaleX,
+					 					sin(_Time.y *_DistortionSpeedY + o.grabCoord.x*_DistortionFreqY) *_DistortionScaleY,
+					  					0, 0);
                 o.color = v.color * _Color;
 
 				return o;
