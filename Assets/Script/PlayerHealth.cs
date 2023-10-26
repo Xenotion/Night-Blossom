@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 3;
-    public TMP_Text gameOverText;
+    public GameObject gameOverText;
     public float knockbackForce = 20f;
     public float slowSpeed = 2.5f;
     public float slowDuration = 2f;
@@ -19,6 +19,9 @@ public class PlayerHealth : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private Coroutine slowCoroutine;
+
+    // Mouse look script reference
+    public MonoBehaviour mouseLookController;
 
     private void Start()
     {
@@ -89,5 +92,22 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         gameOverText.gameObject.SetActive(true);
+
+        // Restrict player movement and mouse look
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
+        }
+        if (mouseLookController != null)
+        {
+            mouseLookController.enabled = false;
+        }
+
+        // Make the cursor visible and unlock it
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        // Stop the scene from running
+        Time.timeScale = 0f;
     }
 }
