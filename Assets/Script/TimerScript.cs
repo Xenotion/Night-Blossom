@@ -7,7 +7,12 @@ public class Timer : MonoBehaviour
     public float timerDuration = 300.0f; // 5 minutes in seconds
     private float remainingTime;
     private TextMeshProUGUI timerText; // Using TextMeshProUGUI instead of Text
-    public TMP_Text victoryText;
+    public GameObject victoryText;
+
+    [Header("Player Settings")]
+    public MonoBehaviour playerController; // Reference to the player controller script
+    public MonoBehaviour mouseLookController; // Reference to the mouse look script
+    public bool disablePlayerInputOnEnd = true; // Toggle to decide if player input should be disabled when timer ends
 
     private bool isTimerRunning = false; // To check if the timer has started
 
@@ -43,6 +48,25 @@ public class Timer : MonoBehaviour
     {
         timerText.text = "Time's Up!";
         victoryText.gameObject.SetActive(true);
+
+        // Make the cursor visible and unlock it
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        // Disable player input and mouse look if the toggle is set
+        if (disablePlayerInputOnEnd)
+        {
+            if (playerController != null)
+            {
+                playerController.enabled = false;
+            }
+            if (mouseLookController != null)
+            {
+                mouseLookController.enabled = false;
+            }
+        }
+
+        Time.timeScale = 0f;
     }
 
     public bool getIsTimerRunning() {
