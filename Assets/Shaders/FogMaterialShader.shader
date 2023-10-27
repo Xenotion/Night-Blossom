@@ -82,9 +82,7 @@ Shader "FogMaterialShader"
                 // Gouraud shading, adapted from workshop 9 code
 
                 // Convert Vertex position and corresponding normal into world coords.
-				// Note that we have to multiply the normal by the transposed inverse of the world 
-				// transformation matrix (for cases where we have non-uniform scaling; we also don't
-				// care about the "fourth" dimension, because translations don't affect the normal) 
+			
 				float4 worldVertex = mul(unity_ObjectToWorld, v.vertex);
 				float3 worldNormal = normalize(mul(transpose((float3x3)unity_WorldToObject), v.normal.xyz));
 

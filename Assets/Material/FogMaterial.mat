@@ -90,7 +90,7 @@ Material:
     - _Albedo2Tiling: 1
     - _AlbedoContrast: 1
     - _AlbedoIntensity: 1
-    - _Alpha: 999
+    - _Alpha: 6
     - _AtmosphereThickness: 1
     - _BumpScale: 1
     - _C: 0.99
@@ -111,8 +111,8 @@ Material:
     - _IntersectionThresholdMax: 6
     - _K: 6.28
     - _Ka: 1
-    - _Kd: 0.2
-    - _Ks: 0.3
+    - _Kd: 0.05
+    - _Ks: 0.2
     - _Metallic: 0
     - _MicrowaveScale: 1
     - _MicrowaveStrength: 0.5
