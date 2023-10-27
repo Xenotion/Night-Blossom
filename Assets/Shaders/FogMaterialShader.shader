@@ -82,9 +82,7 @@ Shader "FogMaterialShader"
                 // Gouraud shading, adapted from workshop 9 code
 
                 // Convert Vertex position and corresponding normal into world coords.
-				// Note that we have to multiply the normal by the transposed inverse of the world 
-				// transformation matrix (for cases where we have non-uniform scaling; we also don't
-				// care about the "fourth" dimension, because translations don't affect the normal) 
+			
 				float4 worldVertex = mul(unity_ObjectToWorld, v.vertex);
 				float3 worldNormal = normalize(mul(transpose((float3x3)unity_WorldToObject), v.normal.xyz));
 
@@ -101,11 +99,13 @@ Shader "FogMaterialShader"
                 float3 dif = fAtt * _LightColor0.rgb * _Kd * v.color.rgb * saturate(LdotN); 
                
 				// Calculate specular reflections
-				float3 V = normalize(_WorldSpaceCameraPos - worldVertex.xyz);
+				
+				float3 V = normalize(_WorldSpaceCameraPos - worldVertex.xyz );
 
                 // direction of the reflection
                 // calculated using the formula from: https://math.stackexchange.com/questions/13261/how-to-get-a-reflection-vector
-				float3 R = normalize(L - 2 * dot(L, worldNormal.xyz) * worldNormal.xyz);
+				// note: this is reversed to make the light direction look correct inside the fog
+				float3 R = -1 * normalize(L - 2 * dot(L, worldNormal.xyz) * worldNormal.xyz);
 
                 // kinda cool effect: use vector to camera instead of to light
                 //float3 R = normalize(V - 2 * dot(V, worldNormal.xyz) * worldNormal.xyz);
@@ -115,9 +115,6 @@ Shader "FogMaterialShader"
 				o.color.rgb = amb.rgb + dif.rgb + spe.rgb;
 				o.color.a = v.color.a;
 
-                // Apply wave effect (similar to the WaveShader)
-                float4 displacement = float4(sin(_Time.y * 4.0f + v.vertex.y * 1.5f) * 0.04f - 0.025f, sin(_Time.y * 4.0f + v.vertex.x * 1.5f) * 0.01f - 0.01f, sin(_Time.y * 4.0f + v.vertex.y * 1.5f) * 0.01f, 0.0f);
-                v.vertex.xyz += displacement.xyz;
 
                 o.vertex = UnityObjectToClipPos(v.vertex);
 
