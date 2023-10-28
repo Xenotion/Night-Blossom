@@ -19,10 +19,17 @@ Properties
 		_DistortionScaleX("X Scale", float) = 1.0
 		_DistortionScaleY("Y Scale", float) = 1.0
 
+
+		// wave function from :https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/03%3A_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.09%3A_A_Particle_in_a_Three-Dimensional_Box
 		_Lx("X width", float) = 4.0
 		_Ly("Y width", float) = 4.0
-		_nx("X nodes", float) = 4.0
-		_ny("Y nodes", float) = 4.0
+		_nx("X nodes factor", float) = 4.0
+		_ny("Y nodes factor", float) = 4.0
+
+		// inversely affects how big the middle transparent part is
+		_TransparentAreaFactor("Transparent Area Factor", Range(0, 20)) = 10
+
+
 	}
 	SubShader
 	{
@@ -64,6 +71,8 @@ Properties
 			float _Ly;
 			float _nx;
 			float _ny;
+
+			float _TransparentAreaFactor;
 			
 
             sampler2D _GrabTexture;
@@ -71,7 +80,7 @@ Properties
 			struct vertIn
 			{
 				float4 vertex : POSITION;
-				//float4 normal : NORMAL;
+				float4 normal : NORMAL;
 				float4 color : COLOR;
                 
 			};
@@ -89,20 +98,37 @@ Properties
 				float PI = 3.14f;
 	
 				vertOut o;
+
+			
+				float4 worldVertex = mul(unity_ObjectToWorld, v.vertex);
+				float3 worldNormal = normalize(mul(transpose((float3x3)unity_WorldToObject), v.normal.xyz));
+				float3 L = normalize(_WorldSpaceLightPos0.xyz - worldVertex.xyz); 
+				float3 V = normalize(_WorldSpaceCameraPos - worldVertex.xyz);
+                float LdotN = dot(L, worldNormal.xyz);
+				// don't care about which side
+				float VdotN = abs( dot(V, worldNormal.xyz));
+
+
 				// wave function from :https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/03%3A_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.09%3A_A_Particle_in_a_Three-Dimensional_Box
 				// z is x, x is y, y is z
-				//float waveFunction = sqrt(2/_Lx)*sin((_nx * PI * v.vertex.z)/_Lx) * sqrt(2/_Ly)*sin((_ny * PI * v.vertex.x)/_Ly);
-				//float waveFunction = sin(v.vertex.x*PI/4);
-
+				float waveFunction = sqrt(2/_Lx)*sin((_nx * PI * v.vertex.z)/_Lx) * sqrt(2/_Ly)*sin((_ny * PI * v.vertex.x)/_Ly);
+		
 
 				// drop wave from https://al-roomi.org/benchmarks/unconstrained/2-dimensions/54-drop-wave-function
-				float adjustedX = v.vertex.z * 5.12 / _Lx;
-				float adjustedY = v.vertex.x * 5.12 / _Ly;
-				float waveFunction = -0.001 * (1 + cos(12 * sqrt(adjustedX * adjustedX + adjustedY * adjustedY))/ 0.5f * (adjustedX * adjustedX + adjustedY * adjustedY) + 2);
+				// float adjustedX = v.vertex.z * 5.12 / _Lx;
+				// float adjustedY = v.vertex.x * 5.12 / _Ly;
+				// float waveFunction = -0.001 * (1 + cos(12 * sqrt(adjustedX * adjustedX + adjustedY * adjustedY))/ 0.5f * (adjustedX * adjustedX + adjustedY * adjustedY) + 2);
+
+				// wave function based on angle to camera
+				//float waveFunction = cos(pow(VdotN,0.1) * PI/2);
 
                 float4 displacement = float4(0.0f, 0.0f, 0.0f, 0.0f);
 				displacement.y =  sin(_Time.y) * waveFunction;
                 v.vertex.xyz += displacement.xyz;
+
+
+				
+				
 				o.vertex = UnityObjectToClipPos(v.vertex);
 			
                 o.grabCoord =  ComputeGrabScreenPos(o.vertex);
@@ -114,6 +140,7 @@ Properties
 
 				
                 o.color = v.color * _Color;
+				o.color.a = v.color.a *(1- pow(VdotN,_TransparentAreaFactor));
 
 				return o;
 			}
