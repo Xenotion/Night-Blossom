@@ -18,11 +18,7 @@ public class MouseLook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         targetLeanRotation = Quaternion.Euler(0, 0, 0);
-
-        // Load mouse sensitivity from PlayerPrefs
-        mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", mouseSensitivity);
     }
-
 
     void Update()
     {
@@ -53,4 +49,3 @@ public class MouseLook : MonoBehaviour
         cameraPivot.localRotation = Quaternion.Slerp(cameraPivot.localRotation, targetLeanRotation, leanSpeed * Time.deltaTime);
     }
 }
-
