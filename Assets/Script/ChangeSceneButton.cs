@@ -14,6 +14,8 @@ public class ChangeSceneButton : MonoBehaviour
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("NewMainMenu", LoadSceneMode.Single);
         while (!asyncOperation.isDone)
         {
+            Time.timeScale = 1f;
+
             yield return null; // Wait until the scene finishes loading
         }
     }
