@@ -1,10 +1,6 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
 
-
-Shader "PortalShader"{
+Shader "DistortionShader"{
 Properties
 	{
 		_Color("Color", Color) = (0,0,0,0)

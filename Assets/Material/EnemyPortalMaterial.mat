@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: EnemyPortalMaterial
-  m_Shader: {fileID: 4800000, guid: a34e288b207bcae408d10287493360a2, type: 3}
+  m_Shader: {fileID: 4800000, guid: 88070b7d11f0b0448bac050446b7751b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
