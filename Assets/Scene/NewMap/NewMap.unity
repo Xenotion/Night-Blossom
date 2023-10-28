@@ -29882,7 +29882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1044507939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32184,7 +32184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0ab093d9354b7fbbaf33b2c979b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 300
+  timerDuration: 5
   victoryText: {fileID: 358465983}
   playerController: {fileID: 1606069050}
   mouseLookController: {fileID: 2006969226}
