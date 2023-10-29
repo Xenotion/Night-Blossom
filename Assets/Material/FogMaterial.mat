@@ -90,7 +90,7 @@ Material:
     - _Albedo2Tiling: 1
     - _AlbedoContrast: 1
     - _AlbedoIntensity: 1
-    - _Alpha: 6
+    - _Alpha: 10
     - _AtmosphereThickness: 1
     - _BumpScale: 1
     - _C: 1.03
