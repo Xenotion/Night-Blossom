@@ -108,10 +108,7 @@ Shader "FogMaterialShader"
 				// Calculate specular reflections
 				float3 V = normalize(_WorldSpaceCameraPos - worldVertex.xyz);
 
-                // direction of the reflection
-                // calculated using the formula from: https://math.stackexchange.com/questions/13261/how-to-get-a-reflection-vector
-				// note: this is reversed to make the light direction look correct inside the fog
-				//float3 R = -1 * normalize(L - 2 * dot(L, worldNormal.xyz) * worldNormal.xyz);
+                // direction of the light source
 				float3 R = -1 * normalize(_WorldSpaceLightPos0.xyz);
         
 				float3 spe = fAtt * _LightColor0.rgb * _Ks * pow(saturate(dot(V, R)), _Alpha); 
