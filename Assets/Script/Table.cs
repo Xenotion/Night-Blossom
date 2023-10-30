@@ -9,11 +9,13 @@ public class Table : MonoBehaviour
     public GameObject timerUI; // Reference to the timer UI
     public Light directionalLight; // Reference to your directional light
     public Color colorWhenItemPlaced = Color.red; // The color you want the light to change to when the object is placed
-    public Color colorAtEnd = Color.white;
+    public Color finalColor = Color.white;
+    public float startColorChangeTime = 0.0f;
 
     // TODO: get this from Timer script?
-    private float colorChangeDuration = 300.0f; // 5 minutes in seconds
-    private float elapsedTime = 0.0f;
+    private float endTime = 300.0f; // 5 minutes in seconds
+    
+  
 
     private GameObject[] itemsOnTable;
     private bool itemPlaced = false; // Track if any item has been placed or not
@@ -44,7 +46,8 @@ public class Table : MonoBehaviour
                     if (healthUI != null) healthUI.SetActive(true);
 
                     timer.StartTimer(); // Activate the timer script
-                    //ChangeLightColor();  // Change the light color
+                    ChangeLightColor();  // Change the light color
+                
                     StartCoroutine(ChangeLightColorOverTime());
                     itemPlaced = true;
                 }
@@ -66,14 +69,15 @@ public class Table : MonoBehaviour
      IEnumerator ChangeLightColorOverTime()
     {
         Color startColor = colorWhenItemPlaced;
-        Color targetColor = colorAtEnd;
-        float lastChangedTime = -10.0f;
-        while (elapsedTime < colorChangeDuration)
+        Color targetColor = finalColor;
+        float lastChangedTime = startColorChangeTime -10.0f;
+        float elapsedTime = 0.0f;
+        while (elapsedTime < endTime)
         {
             // Calculate the new color based on the elapsed time.
             
             if(elapsedTime - lastChangedTime >= 10.0f){
-                float t = elapsedTime / colorChangeDuration;
+                float t = (elapsedTime - startColorChangeTime) / (endTime - startColorChangeTime);
                 // TODO: modify rate of change with a function
                 directionalLight.color = Color.Lerp(startColor, targetColor, t);
                 Debug.Log(directionalLight.color);

@@ -1,4 +1,4 @@
-﻿//https://docs.unity3d.com/Manual/SL-SurfaceShaders.html
+﻿
 Shader "DistanceFog"
 {
 	Properties {
@@ -34,6 +34,7 @@ Shader "DistanceFog"
             data.fog = saturate((distanceToCamera - _FogStartDistance) / (_FogEndDistance - _FogStartDistance));
         }
         
+        //https://docs.unity3d.com/Manual/SL-SurfaceShaders.html
         void mycolor (Input IN, SurfaceOutput o, inout fixed4 color)
         {
             fixed3 albedoColor = _Color.rgb;
