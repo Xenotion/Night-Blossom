@@ -120,22 +120,17 @@ Properties
 
                 float4 displacement = float4(0.0f, 0.0f, 0.0f, 0.0f);
 				displacement.y =  sin(_Time.y) * waveFunction;
-                v.vertex.xyz += displacement.xyz;
-
-
-				
-				
+                v.vertex.xyz += displacement.xyz;			
 				o.vertex = UnityObjectToClipPos(v.vertex);
-			
-                o.grabCoord =  ComputeGrabScreenPos(o.vertex);
-                // o.grabcoord = (float2(o.vertex.x, o.vertex.y * -1 ) +o.vertex.w) * 0.5;
-              
+
+				// distort background		
+                o.grabCoord =  ComputeGrabScreenPos(o.vertex);      
                 o.grabCoord +=  float4(sin(_Time.y *_DistortionSpeedX + o.grabCoord.y*_DistortionFreqX) *_DistortionScaleX,
 					 					sin(_Time.y *_DistortionSpeedY + o.grabCoord.x*_DistortionFreqY) *_DistortionScaleY,
 					  					0, 0);
 
-				
                 o.color = v.color * _Color;
+				// adjust transparency based on angle
 				o.color.a = v.color.a *(1- pow(VdotN,_TransparentAreaFactor));
 
 				return o;
@@ -144,11 +139,8 @@ Properties
 			// Implementation of the fragment shader
 			fixed4 frag(vertOut v) : SV_Target
 			{
-               	float2 distortionScale = float2(_DistortionScaleX, _DistortionScaleY);
-			
-                // fixed4 c = tex2D(_GrabTexture, v.grabcoord + (refraction * tex2D(_GrabTexture, distortionScale * v.grabcoord))) * v.color;
+           
                 fixed4 c = tex2Dproj(_GrabTexture, v.grabCoord) * v.color;
-				//fixed4 c = v.color;
 				c.rgb *= c.a;
 
                 return c;

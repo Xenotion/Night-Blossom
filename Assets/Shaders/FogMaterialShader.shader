@@ -99,22 +99,19 @@ Shader "FogMaterialShader"
 
 				// Calculate diffuse RBG reflections, we save the results of L.N because we will use it again
 				// (when calculating the reflected ray in our specular component)
-				float fAtt = 1; // not sure what this is 
+				float fAtt = 1;
 	
 				float3 L = normalize(_WorldSpaceLightPos0.xyz - worldVertex.xyz); 
                 float LdotN = dot(L, worldNormal.xyz);
                 float3 dif = fAtt * _LightColor0.rgb * _Kd * v.color.rgb * saturate(LdotN); 
                
-				// Calculate specular reflections
+				// Calculate specular highlight
 				float3 V = normalize(_WorldSpaceCameraPos - worldVertex.xyz);
 
-                // direction of the light source
+                // direction of the light source instead
 				float3 R = -1 * normalize(_WorldSpaceLightPos0.xyz);
         
 				float3 spe = fAtt * _LightColor0.rgb * _Ks * pow(saturate(dot(V, R)), _Alpha); 
-
-
-				
 
 				// Combine Phong illumination model components
 				o.color.rgb = amb.rgb + dif.rgb;
@@ -122,16 +119,8 @@ Shader "FogMaterialShader"
 				// separate specular highlight first
 				o.lightColor.rgb = spe.rgb;
 				o.lightColor.a = v.color.a;
-				
-
 
                 o.vertex = UnityObjectToClipPos(v.vertex);
-
-
-                // Pass texture coordinates
-               //   o.uv = v.uv;
-
-               
 
 				return o;
 			}
@@ -167,7 +156,7 @@ Shader "FogMaterialShader"
 				// fades in the specular light
 				v.color.rgb += v.lightColor.rgb * specLightFactor;
 
-				// change color
+				// change fog color
                 fixed4 fadeColor = fixed4(lerp(v.color.rgb, _FadeColor, fadeFactor), 1); 
 				
                 fixed4 col =  v.color * v.color.a + fadeColor;
