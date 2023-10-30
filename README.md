@@ -167,7 +167,7 @@ This shader is created to provide a global fog effect after the main game starts
   - _Ka: Ambient reflection constant.
   - _Alpha: Shininess constant for specular highlight.
 
-![Fog effect with parameters](Images/ShadersDemo/fog_white_sun.png)
+![Fog effect with parameters](Images/ShadersDemo/fog_white_sun.jpg)
 
 
 With the appropriate parameters set, an object with “FogMaterial” applied will appear as a shroud of fog. However, we decided that it might fit the theme of our game better if the whole map appeared to be covered in fog, so instead, an object with “FogMaterial” applied covers the main camera and follows it when the fog is required. This object acts as essentially a filter, applying the effect to everything the camera sees.
