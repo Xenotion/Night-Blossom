@@ -189,9 +189,9 @@ The fragment shader calculates the depth of the fragment and then determines its
 ![Portal Gif 2](Images/ShadersDemo/portal2.gif)
 
 The shader is created to enhance the appearance of the portal objects in our game. The main effects provided by this shader are:
-	1. Distorting objects in the background
-	2. Dynamic wave effect
-	3. Variable transparency based on viewing angle
+  1. Distorting objects in the background
+  2. Dynamic wave effect
+  3. Variable transparency based on viewing angle
 
 Currently, [Portal Material](Assets/Material/PortalMaterial.mat) and [Enemy Portal Material](Assets/Material/EnemyPortalMaterial.mat) utilise this shader with different parameters. The parameters are as follows:
 - _Color: The base color of the portal.
