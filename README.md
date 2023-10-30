@@ -142,7 +142,10 @@ TODO (due milestone 3) - see specification for details
 ### [Fog Shader](Assets/Shaders/FogMaterialShader.shader)
 
 
-This shader is created to provide a global fog effect after the main game starts (after the intro section). We use a material, “FogMaterial”, to parameterise the shader and control the fog effect. The parameters are as follows:
+![Fog Gif 1](Images\ShadersDemo\fog_start.gif)
+![Fog Gif 2](Images\ShadersDemo\fog_red_sun.gif)
+
+This shader is created to provide a global fog effect after the main game starts (after the intro section). We use a material, [Fog Material](Assets/Material/FogMaterial.mat), to parameterise the shader and control the fog effect. The parameters are as follows:
 
 
 
@@ -164,8 +167,11 @@ This shader is created to provide a global fog effect after the main game starts
   - _Ka: Ambient reflection constant.
   - _Alpha: Shininess constant for specular highlight.
 
+![Fog effect with parameters](Images\ShadersDemo\fog_white_sun.png)
+
 
 With the appropriate parameters set, an object with “FogMaterial” applied will appear as a shroud of fog. However, we decided that it might fit the theme of our game better if the whole map appeared to be covered in fog, so instead, an object with “FogMaterial” applied covers the main camera and follows it when the fog is required. This object acts as essentially a filter, applying the effect to everything the camera sees.
+
 
 **Implementation details**
 
@@ -179,12 +185,15 @@ The fragment shader calculates the depth of the fragment and then determines its
 
 ### [Distortion Shader](Assets/Shaders/DistortionShader.shader)
 
+![Portal Gif 1](Images\ShadersDemo\portal1.gif)
+![Portal Gif 2](Images\ShadersDemo\portal2.gif)
+
 The shader is created to enhance the appearance of the portal objects in our game. The main effects provided by this shader are:
 	1. Distorting objects in the background
 	2. Dynamic wave effect
 	3. Variable transparency based on viewing angle
 
-Currently, “Portal Material” and “Enemy Portal Material” (insert link) utilise this shader with different parameters. The parameters are as follows:
+Currently, [Portal Material](Assets/Material/PortalMaterial.mat) and [Enemy Portal Material](Assets/Material/EnemyPortalMaterial.mat) utilise this shader with different parameters. The parameters are as follows:
 - _Color: The base color of the portal.
 
 - _DistortionSpeedX and _DistortionSpeedY: These control the speed of the portal's distortions along the X and Y axes. 
@@ -204,7 +213,7 @@ Currently, “Portal Material” and “Enemy Portal Material” (insert link) u
 
 
 
-_TransparentAreaFactor: Controls the area / fading behaviour of the transparent section within the portal. 
+- _TransparentAreaFactor: Controls the area / fading behaviour of the transparent section within the portal. 
 
 
 Having these parameters allows us to fine-tune the appearance of the portals to fit the aesthetics of our game.
@@ -217,7 +226,7 @@ Most of the heavy lifting is done in the vertex shader. It first computes the di
 
 Fragment Shader
 
-The fragment shader takes the distorted on-screen positions, and finds the corresponding texture behind the object, tinting it based on the material colour and transparency to use as the final color of the fragment. The resulting effect is portals that appear distorted in multiple dimensions, with a transparent/undistorted part facing the player, creating a mysterious yet inviting effect.
+The fragment shader takes the distorted on-screen positions, and finds the corresponding texture behind the object, tinting it based on the material colour and transparency to use as the final color of the fragment. The resulting effect is portals that appear distorted in multiple dimensions, with a transparent/undistorted part facing the player, creating a mysterious yet inviting look.
 
 ### TODO: Particle system
 
