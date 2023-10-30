@@ -35405,7 +35405,8 @@ MonoBehaviour:
   timerUI: {fileID: 1107944380}
   directionalLight: {fileID: 962666131}
   colorWhenItemPlaced: {r: 1, g: 0, b: 0, a: 1}
-  colorAtEnd: {r: 1, g: 0.72072697, b: 0.7122642, a: 1}
+  finalColor: {r: 1, g: 1, b: 1, a: 1}
+  startColorChangeTime: 240
 --- !u!1001 &1237512370
 PrefabInstance:
   m_ObjectHideFlags: 0
