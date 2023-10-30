@@ -142,8 +142,8 @@ TODO (due milestone 3) - see specification for details
 ### [Fog Shader](Assets/Shaders/FogMaterialShader.shader)
 
 
-![Fog Gif 1](Images\ShadersDemo\fog_start.gif)
-![Fog Gif 2](Images\ShadersDemo\fog_red_sun.gif)
+![Fog Gif 1](Images/ShadersDemo/fog_start.gif)
+![Fog Gif 2](Images/ShadersDemo/fog_red_sun.gif)
 
 This shader is created to provide a global fog effect after the main game starts (after the intro section). We use a material, [Fog Material](Assets/Material/FogMaterial.mat), to parameterise the shader and control the fog effect. The parameters are as follows:
 
@@ -167,7 +167,7 @@ This shader is created to provide a global fog effect after the main game starts
   - _Ka: Ambient reflection constant.
   - _Alpha: Shininess constant for specular highlight.
 
-![Fog effect with parameters](Images\ShadersDemo\fog_white_sun.png)
+![Fog effect with parameters](Images/ShadersDemo/fog_white_sun.png)
 
 
 With the appropriate parameters set, an object with “FogMaterial” applied will appear as a shroud of fog. However, we decided that it might fit the theme of our game better if the whole map appeared to be covered in fog, so instead, an object with “FogMaterial” applied covers the main camera and follows it when the fog is required. This object acts as essentially a filter, applying the effect to everything the camera sees.
@@ -185,8 +185,8 @@ The fragment shader calculates the depth of the fragment and then determines its
 
 ### [Distortion Shader](Assets/Shaders/DistortionShader.shader)
 
-![Portal Gif 1](Images\ShadersDemo\portal1.gif)
-![Portal Gif 2](Images\ShadersDemo\portal2.gif)
+![Portal Gif 1](Images/ShadersDemo/portal1.gif)
+![Portal Gif 2](Images/ShadersDemo/portal2.gif)
 
 The shader is created to enhance the appearance of the portal objects in our game. The main effects provided by this shader are:
 	1. Distorting objects in the background
