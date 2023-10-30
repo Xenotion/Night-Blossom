@@ -139,7 +139,7 @@ TODO (due milestone 3) - see specification for details
 
 ## Shaders and Special Effects
 
-### Fog Shader
+### [Fog Shader](Assets/Shaders/FogMaterialShader.shader)
 
 
 This shader is created to provide a global fog effect after the main game starts (after the intro section). We use a material, “FogMaterial”, to parameterise the shader and control the fog effect. The parameters are as follows:
@@ -167,7 +167,7 @@ This shader is created to provide a global fog effect after the main game starts
 
 With the appropriate parameters set, an object with “FogMaterial” applied will appear as a shroud of fog. However, we decided that it might fit the theme of our game better if the whole map appeared to be covered in fog, so instead, an object with “FogMaterial” applied covers the main camera and follows it when the fog is required. This object acts as essentially a filter, applying the effect to everything the camera sees.
 
-**Implementation details:**
+**Implementation details**
 
 Vertex Shader
 
@@ -177,7 +177,7 @@ Fragment Shader
 
 The fragment shader calculates the depth of the fragment and then determines its final colour by blending the base fog colour, the ‘fade’ colour, the highlight colour, and an appropriate amount of transparency based on the parameters and a distance function. This results in the material fading the colours of the objects behind it, creating a fog-like effect.
 
-### Distortion Shader
+### [Distortion Shader](Assets/Shaders/DistortionShader.shader)
 
 The shader is created to enhance the appearance of the portal objects in our game. The main effects provided by this shader are:
 	1. Distorting objects in the background
@@ -197,10 +197,10 @@ Currently, “Portal Material” and “Enemy Portal Material” (insert link) u
 
 - _Lx,  _Ly, _nx and _ny: parameters of the wave function, based on [the wave function of a quantum particle in a box](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/03%3A_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.09%3A_A_Particle_in_a_Three-Dimensional_Box)
 
-By setting these to the appropriate values based on the size and shape of the material, we can achieve effects similar to this:
-![wave effect](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Particle2D.svg/320px-Particle2D.svg.png)
+    By setting these to the appropriate values based on the size and shape of the material, we can achieve effects similar to this:
+    ![wave effect](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Particle2D.svg/320px-Particle2D.svg.png)
 
-(However, due to the low amount of vertices in the default unity plane, the resulting waves are not as smooth)
+    (However, due to the low amount of vertices in the default unity plane, the resulting waves are not as smooth)
 
 
 
@@ -209,7 +209,7 @@ _TransparentAreaFactor: Controls the area / fading behaviour of the transparent 
 
 Having these parameters allows us to fine-tune the appearance of the portals to fit the aesthetics of our game.
 
-**Implementation details:**
+**Implementation details**
 
 Vertex Shader
 	
@@ -219,7 +219,7 @@ Fragment Shader
 
 The fragment shader takes the distorted on-screen positions, and finds the corresponding texture behind the object, tinting it based on the material colour and transparency to use as the final color of the fragment. The resulting effect is portals that appear distorted in multiple dimensions, with a transparent/undistorted part facing the player, creating a mysterious yet inviting effect.
 
-
+### TODO: Particle system
 
 ## Summary of Contributions
 
