@@ -352,4 +352,41 @@ The success of our project can be attributed to the synergistic collaboration am
 
 ## References and External Resources
 
-TODO (to be continuously updated) - see specification for details
+**Monster Assets:**
+
+https://www.artstation.com/marketplace/p/3pBqo/dark-spectre-v1-2
+
+**Design Assets:**
+
+**Flower:** https://www.cgtrader.com/free-3d-models/plant/flower/red-rose--3?fbclid=IwAR2JGYuvdvuPvADDrchtXlgywZaoDknjxisliQmbAAeazSGRLwm1e-KcAvg
+
+**Key:** https://www.turbosquid.com/3d-models/3d-liberty-door-handles-key-1160ch2020-model-2018729?fbclid=IwAR0a2aRcNPQ9dcqZI1RoIDnk4uDDyxZGeO0fowo7v6o4ovHUpJO57MeW5vY
+
+**Teddy Bear:** https://www.turbosquid.com/3d-models/teddy-bear-3d-model-1256850?fbclid=IwAR0rA8mEKgjcAzO72OY4dD9u4GHhF1aYoHnz5Zq7b_cIkjiv-qmT5kyzSX4
+
+**Book:** https://www.turbosquid.com/3d-models/book-low-poly-model-3d-model-1814524?fbclid=IwAR22YzuhtvMrEKYrvaSpNUokF57n-Py5qvnyAtqu4_jQPEX2FhRvuAtcgUw
+
+**Gamemap:** 
+
+https://assetstore.unity.com/packages/3d/environments/polygon-samurai-low-poly-3d-art-by-synty-89551
+
+https://assetstore.unity.com/packages/3d/environments/historic/simple-shrine-pack-175272
+
+**Blood prefab:** 
+https://assetstore.unity.com/packages/2d/textures-materials/blood-splatter-decal-package-7518
+
+
+**Audio:**
+
+**BGM 1 Zen Garden:** https://www.fesliyanstudios.com/royalty-free-music/downloads-c/japanese-music/63?fbclid=IwAR0yi1wM_J5Al1Oc4zXoLw1v2SLkpoUmflGbxW4Ghd9-taKqLp3nvTTBUH4
+
+
+**BGM 2 During game:** https://www.youtube.com/watch?v=WgY6aWtJ-zg 
+
+**Jumpscare:** https://www.youtube.com/watch?v=0m3pxkOpxwc
+
+
+**Fonts:**
+
+https://fontmeme.com/fonts/little-nightmare-font/
+
