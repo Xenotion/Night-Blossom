@@ -354,9 +354,12 @@ The success of our project can be attributed to the synergistic collaboration am
 
 **Monster Assets:**
 
+
 https://www.artstation.com/marketplace/p/3pBqo/dark-spectre-v1-2
 
+
 **Design Assets:**
+
 
 **Flower:** https://www.cgtrader.com/free-3d-models/plant/flower/red-rose--3?fbclid=IwAR2JGYuvdvuPvADDrchtXlgywZaoDknjxisliQmbAAeazSGRLwm1e-KcAvg
 
@@ -377,6 +380,7 @@ https://assetstore.unity.com/packages/2d/textures-materials/blood-splatter-decal
 
 
 **Audio:**
+
 
 **BGM 1 Zen Garden:** https://www.fesliyanstudios.com/royalty-free-music/downloads-c/japanese-music/63?fbclid=IwAR0yi1wM_J5Al1Oc4zXoLw1v2SLkpoUmflGbxW4Ghd9-taKqLp3nvTTBUH4
 
