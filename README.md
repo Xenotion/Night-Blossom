@@ -139,14 +139,17 @@ Evaluation Report
 
 The main goal of our evaluation was to improve “Night Blossom” by utilising feedback from real life players. Here we used the Query evaluation technique through asking a very carefully selected group of people to answer a range of questions. 
 
-1.0 Participants /Demographic information
+1.0 Participants/Demographic information
 
 Our players were carefully selected among a bunch in order to ensure the most useful information for our target audience. We specifically search for gamers who were into the horror genre and had played a horror game at least once in the past year.
 
 New gamers, casual gamers and hardcore were chosen to help Night Blossom target a wider audience. In this case hardcore indicated playing games daily or every two days. Casual was at least once a fortnight and then new gamers indicated those who only played very solemnly (once a month or less).
 
-
  Of the 15 players chosen, 4 chosen were new,  7 were casual gamers and 4  considered themselves more hardcore. 
+
+<p align="middle">
+  <img src="Demographic.png" width="400">
+</p>
 
 Both genders were equally chosen with 8 identifying as male and 7 identifying as female.
 
@@ -178,7 +181,9 @@ What could we improve on? Short answer allowing players to add any additional co
 
 Survival rate: Night Blossom had a survival rate or otherwise completion rate of 85.7% indicating the game is within a reasonable enough difficulty.
 
-
+<p align="middle">
+  <img src="Images/Success rate.png" width="400">
+</p>
 
 Ratings and feedback: Overall rates average at 4.7 out of 5 indicating the players enjoyed their overall experience and gameplay of Night blossom.
 
