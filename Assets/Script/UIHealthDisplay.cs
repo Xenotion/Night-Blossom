@@ -11,7 +11,7 @@ public class HealthAndVignette : MonoBehaviour
     Vignette vignetteLayer;
 
     float vignetteIntensityHealth2 = 0.45f; // Intensity when health is 2
-    float vignetteIntensityHealth1OrBelow = 0.55f; // Intensity when health is 1 or below
+    float vignetteIntensityHealth1OrBelow = 0.5f; // Intensity when health is 1 or below
 
     float pulseSpeed = 1.5f; // Speed of the pulsating effect
     float time = 0f; // Time variable for pulsation
