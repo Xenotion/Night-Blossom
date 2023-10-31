@@ -318,9 +318,79 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 ### TODO: Particle system
 
 ## Summary of Contributions
+Objective: Build a 5 minute survival horror game 
 
-TODO (due milestone 3) - see specification for details
+<p align="middle">
+  <img src="Images/Studio.png" width="400">
+</p>
+
+
+Developing a game with a three-member team demanded effective workload distribution. To ensure equitable division, an initial meeting was conducted to deliberate on each member's strengths and weaknesses. This discussion led to an understanding of individual preferences and skill sets, culminating in the subdivision of three primary sections: Design/Story, Gameplay, and Monster development. Although each member primarily focused on their designated area, they also contributed to other aspects when needed. This collaborative approach facilitated a well-timed and proficient project completion, enabling every team member to showcase their expertise.
+
+**Team Leader/ Design:** Natasha Ngo
+
+Natasha focused on the design of the game including story and map design. She worked carefully with features like dialogue, visual design and sound design. Focus was also done on ensuring tasks were completed on time and updating trello accordingly and assigning priorities. This member also focused on quality of life features that would make the game overall more seamless and immersive for the player. These included things such as jumpscares noises and pulsating blood on the screen when damaged.
+
+This member focused on other points as well like the main menu and end scenes with dialogue; ensuring the game started and ended smoothly whilst staying interesting and engaging for the player.
+
+**Monster/Shaders:** Kaiyuan Cui
+
+Kai was the main developer for the monster artificial intelligence. He worked with creating a monster that could effectively chase the main character as well as follow a path.  This member also focused heavily on the shaders and particles that were used on this project including features such as fog, portals and blood effects. These overall added to the creepy atmosphere which was very crucial to the horror theme.
+
+In addition to the monster’s behaviour , Kai put considerable efforts towards communicating with the team members and ensuring the game development ran smoothly. 
+
+**Gameplay/Player movement:** John An
+
+John led the development of gameplay mechanics, concentrating on essential player movements such as peeking, running, picking up, and placing items. His expertise extended to creating random spawn points for items, enhancing the game's replay value and future playability.
+
+He actively supported other team members, playing a pivotal role in ensuring a seamless start-to-finish gameplay experience. His contributions were instrumental in orchestrating the game's initiation and conclusion with precision and accuracy. John was effective at communicating and worked very well with other team members. 
+
+**Conclusion:**
+
+The success of our project can be attributed to the synergistic collaboration among team members, their unwavering dedication, and their willingness to step beyond their designated roles to ensure a comprehensive and compelling game. By leveraging each member's strengths and their collective commitment to the game's vision, we successfully created a horror experience that captivates and challenges players.
+
 
 ## References and External Resources
 
-TODO (to be continuously updated) - see specification for details
+**Monster Assets:**
+
+
+https://www.artstation.com/marketplace/p/3pBqo/dark-spectre-v1-2
+
+
+**Design Assets:**
+
+
+**Flower:** https://www.cgtrader.com/free-3d-models/plant/flower/red-rose--3?fbclid=IwAR2JGYuvdvuPvADDrchtXlgywZaoDknjxisliQmbAAeazSGRLwm1e-KcAvg
+
+**Key:** https://www.turbosquid.com/3d-models/3d-liberty-door-handles-key-1160ch2020-model-2018729?fbclid=IwAR0a2aRcNPQ9dcqZI1RoIDnk4uDDyxZGeO0fowo7v6o4ovHUpJO57MeW5vY
+
+**Teddy Bear:** https://www.turbosquid.com/3d-models/teddy-bear-3d-model-1256850?fbclid=IwAR0rA8mEKgjcAzO72OY4dD9u4GHhF1aYoHnz5Zq7b_cIkjiv-qmT5kyzSX4
+
+**Book:** https://www.turbosquid.com/3d-models/book-low-poly-model-3d-model-1814524?fbclid=IwAR22YzuhtvMrEKYrvaSpNUokF57n-Py5qvnyAtqu4_jQPEX2FhRvuAtcgUw
+
+**Gamemap:** 
+
+https://assetstore.unity.com/packages/3d/environments/polygon-samurai-low-poly-3d-art-by-synty-89551
+
+https://assetstore.unity.com/packages/3d/environments/historic/simple-shrine-pack-175272
+
+**Blood prefab:** 
+https://assetstore.unity.com/packages/2d/textures-materials/blood-splatter-decal-package-7518
+
+
+**Audio:**
+
+
+**BGM 1 Zen Garden:** https://www.fesliyanstudios.com/royalty-free-music/downloads-c/japanese-music/63?fbclid=IwAR0yi1wM_J5Al1Oc4zXoLw1v2SLkpoUmflGbxW4Ghd9-taKqLp3nvTTBUH4
+
+
+**BGM 2 During game:** https://www.youtube.com/watch?v=WgY6aWtJ-zg 
+
+**Jumpscare:** https://www.youtube.com/watch?v=0m3pxkOpxwc
+
+
+**Fonts:**
+
+https://fontmeme.com/fonts/little-nightmare-font/
+
