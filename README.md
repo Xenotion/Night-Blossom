@@ -318,9 +318,7 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 ### TODO: Particle system
 
 
-![Blood Splatter](Images/attack particle.gif)
-
-
+![Particle](Images/ShadersDemo/attack particle.gif)
 
 
 
