@@ -318,8 +318,32 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 ### TODO: Particle system
 
 ## Summary of Contributions
+Objective: Build a 5 minute survival horror game 
 
-TODO (due milestone 3) - see specification for details
+Developing a game with a three-member team demanded effective workload distribution. To ensure equitable division, an initial meeting was conducted to deliberate on each member's strengths and weaknesses. This discussion led to an understanding of individual preferences and skill sets, culminating in the subdivision of three primary sections: Design/Story, Gameplay, and Monster development. Although each member primarily focused on their designated area, they also contributed to other aspects when needed. This collaborative approach facilitated a well-timed and proficient project completion, enabling every team member to showcase their expertise.
+
+**Team Leader/ Design:** Natasha Ngo
+
+Natasha focused on the design of the game including story and map design. She worked carefully with features like dialogue, visual design and sound design. Focus was also done on ensuring tasks were completed on time and updating trello accordingly and assigning priorities. This member also focused on quality of life features that would make the game overall more seamless and immersive for the player. These included things such as jumpscares noises and pulsating blood on the screen when damaged.
+
+This member focused on other points as well like the main menu and end scenes with dialogue; ensuring the game started and ended smoothly whilst staying interesting and engaging for the player.
+
+**Monster/Shaders:** Kaiyuan Cui
+
+Kai was the main developer for the monster artificial intelligence. He worked with creating a monster that could effectively chase the main character as well as follow a path.  This member also focused heavily on the shaders and particles that were used on this project including features such as fog, portals and blood effects. These overall added to the creepy atmosphere which was very crucial to the horror theme.
+
+In addition to the monster’s behaviour , Kai put considerable efforts towards communicating with the team members and ensuring the game development ran smoothly. 
+
+**Gameplay/Player movement:** John An
+
+John led the development of gameplay mechanics, concentrating on essential player movements such as peeking, running, picking up, and placing items. His expertise extended to creating random spawn points for items, enhancing the game's replay value and future playability.
+
+He actively supported other team members, playing a pivotal role in ensuring a seamless start-to-finish gameplay experience. His contributions were instrumental in orchestrating the game's initiation and conclusion with precision and accuracy. John was effective at communicating and worked very well with other team members. 
+
+**Conclusion:**
+
+The success of our project can be attributed to the synergistic collaboration among team members, their unwavering dedication, and their willingness to step beyond their designated roles to ensure a comprehensive and compelling game. By leveraging each member's strengths and their collective commitment to the game's vision, we successfully created a horror experience that captivates and challenges players.
+
 
 ## References and External Resources
 
