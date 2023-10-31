@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -108,10 +108,10 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 1
     agentHeight: 3
-    agentSlope: 45
-    agentClimb: 1
+    agentSlope: 60
+    agentClimb: 2
     ledgeDropHeight: 10
-    maxJumpAcrossDistance: 0
+    maxJumpAcrossDistance: 2
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.33333334
@@ -12163,6 +12163,10 @@ PrefabInstance:
     - target: {fileID: 4944081441601530551, guid: fdc1b8d9e7e60b048bfc12d3d389865a, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944081441601530551, guid: fdc1b8d9e7e60b048bfc12d3d389865a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4944081441601530551, guid: fdc1b8d9e7e60b048bfc12d3d389865a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -59901,6 +59905,14 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: f116c6e17d68ed346b1304fc94f2c65a, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f116c6e17d68ed346b1304fc94f2c65a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f116c6e17d68ed346b1304fc94f2c65a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
