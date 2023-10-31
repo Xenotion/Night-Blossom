@@ -4,7 +4,7 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    public float timerDuration = 300.0f; // 5 minutes in seconds
+    public float timerDuration = 10.0f; // 5 minutes in seconds
     private float remainingTime;
     private TextMeshProUGUI timerText; // Using TextMeshProUGUI instead of Text
     public GameObject victoryText;

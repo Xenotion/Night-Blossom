@@ -32442,7 +32442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb0ab093d9354b7fbbaf33b2c979b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 300
+  timerDuration: 10
   victoryText: {fileID: 358465983}
   playerController: {fileID: 1606069050}
   mouseLookController: {fileID: 2006969226}
