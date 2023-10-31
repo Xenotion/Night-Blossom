@@ -320,6 +320,11 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 ## Summary of Contributions
 Objective: Build a 5 minute survival horror game 
 
+<p align="middle">
+  <img src="Images/Slay Game studios.png" width="400">
+</p>
+
+
 Developing a game with a three-member team demanded effective workload distribution. To ensure equitable division, an initial meeting was conducted to deliberate on each member's strengths and weaknesses. This discussion led to an understanding of individual preferences and skill sets, culminating in the subdivision of three primary sections: Design/Story, Gameplay, and Monster development. Although each member primarily focused on their designated area, they also contributed to other aspects when needed. This collaborative approach facilitated a well-timed and proficient project completion, enabling every team member to showcase their expertise.
 
 **Team Leader/ Design:** Natasha Ngo
