@@ -39,7 +39,7 @@
     - [References](#references)
 
 <p align="middle">
-  <img src="Images/369284952_2108468236027058_8344423754422645286_n.jpg" width="400">
+  <img src="Images/Logo.png" width="400">
 </p>
 
 ## 1.0 Game Overview
