@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/NewMap/OptionScene.unity
     guid: 30072d46325336d4ca0b83e109a1e3f1
+  - enabled: 1
+    path: Assets/Scene/NewMap/EndScreen.unity
+    guid: 564ed6068f1720440a20aa1d955a6fec
   m_configObjects: {}

@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -47,26 +49,19 @@ public class Timer : MonoBehaviour
     private void TimerEnded()
     {
         timerText.text = "Time's Up!";
-        victoryText.gameObject.SetActive(true);
 
-        // Make the cursor visible and unlock it
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        StartCoroutine(AsyncLoadGameScene());
+    }
 
-        // Disable player input and mouse look if the toggle is set
-        if (disablePlayerInputOnEnd)
+    IEnumerator AsyncLoadGameScene()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("EndScreen", LoadSceneMode.Single);
+        while (!asyncOperation.isDone)
         {
-            if (playerController != null)
-            {
-                playerController.enabled = false;
-            }
-            if (mouseLookController != null)
-            {
-                mouseLookController.enabled = false;
-            }
-        }
+            Time.timeScale = 1f;
 
-        Time.timeScale = 0f;
+            yield return null; // Wait until the scene finishes loading
+        }
     }
 
     public bool getIsTimerRunning() {

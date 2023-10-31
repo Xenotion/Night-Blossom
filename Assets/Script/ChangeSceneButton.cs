@@ -6,6 +6,7 @@ public class ChangeSceneButton : MonoBehaviour
 {
     public void LoadGameScene()
     {
+        Debug.Log("To menu");
         StartCoroutine(AsyncLoadGameScene());
     }
 
