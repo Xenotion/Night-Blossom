@@ -175,9 +175,9 @@ A google form was sent to 15 gamers who played the game. We asked about:
 **What could we improve on?** Short answer allowing players to add any additional comments and advice.
 
 
-**3.0 Data Analysis **
+**3.0 Data Analysis**
 
-**3.1 Quantitative Analysis **
+**3.1 Quantitative Analysis**
 
 **Survival rate:** Night Blossom had a survival rate or otherwise completion rate of 85.7% indicating the game is within a reasonable enough difficulty.
 
@@ -192,9 +192,11 @@ A google form was sent to 15 gamers who played the game. We asked about:
 
 **Difficulty:**
 
-**Number of tries to complete:** The average number of tries to complete the game was 2.7 indicating a moderate level of challenge. Players typically required multiple attempts to succeed, suggesting a balanced level of difficulty that encourages replay. 
+**Number of tries to complete:** 
+The average number of tries to complete the game was **2.7** indicating a moderate level of challenge. Players typically required multiple attempts to succeed, suggesting a balanced level of difficulty that encourages replay. 
 
-**How many times were you hit if you won?** Among players who were able to win the game, they were hit on average 1.2 highlighting an expecting number of encounters. This underscores that successful players navigated the game efficiently once they were able to play a few times ( as indicated with previous number of tries to complete).
+**How many times were you hit if you won?** 
+Among players who were able to win the game, they were hit on average **1.2** highlighting an expecting number of encounters. This underscores that successful players navigated the game efficiently once they were able to play a few times ( as indicated with previous number of tries to complete).
 
 
 
