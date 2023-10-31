@@ -137,7 +137,7 @@ This allows for even contribution and members will help and contribute to the ot
 
 **Evaluation Report**
 
-The main goal of our evaluation was to improve “Night Blossom” by utilising feedback from real life players. Here we used the Query evaluation technique through asking a very carefully selected group of people to answer a range of questions. 
+The main goal of our evaluation was to improve “Night Blossom” by utilising feedback from real life players. Here we used the Query evaluation technique through asking a very carefully selected group of people to answer a range of questions. We also noted an observational method; watching the players whilst they tried to survive.
 
 **1.0 Participants/Demographic information**
 
@@ -173,6 +173,10 @@ A google form was sent to 15 gamers who played the game. We asked about:
 **How many times were you hit if you won?** From 0 to 2 as 3 hits indicates the player has lost the game.
 
 **What could we improve on?** Short answer allowing players to add any additional comments and advice.
+
+**Observational** 
+
+We used the Observational method "Think Aloud" to analyse our testers. We analysed their reactions whilst playing include things like visible panic and any verbal thoughts they had. 
 
 
 **3.0 Data Analysis**
@@ -211,7 +215,6 @@ Among players who were able to win the game, they were hit on average **1.2** hi
 
 **Fear factor:** Majority of comments made were about fear factor and mentioned adding more scary features such as jumpscares and more. This was taken strongly in consideration as the main focus of the game is the horror and fear aspect.
 
-
 **Improvements and changes for game:**
 
 **Gameplay:** Items will now be randomised allowing for replayability and more difficulty 
@@ -219,6 +222,14 @@ Among players who were able to win the game, they were hit on average **1.2** hi
 **Story:** More dialogue has been added and a final ending cutscene to finalise and wrap up the game added
 
 **Fear factor:** Multiple features were added here. Jumpscares were added at points the players picked items to create a sense of vulnerability and intensity. Moreover more sound effects including increasing heart beat around monster and jumpscare sounds added. Screen distortion was added upon damage creating further fear among players. 
+
+**Observational - Think Aloud** 
+
+Whilst our testers were playing the game, we analysed their reactions, facial expressions and anything they said. It was noted that most players looked very focused on the game and there was an overall serious vibe. Out of the 15 players, around 9 were noted to be shocked when the enemy attacked helping us to find the strengths in the fear factors and also where to improve. 
+
+Players seemed to follow the game route quite well and it seems that it was simple enough to follow without our own interference. There was some light startled sounds but nothing significant which we will take into account for our next update. Overall the observational method served quite well beyond just the quantitative data. 
+
+
 
 **Conclusion:**
 
