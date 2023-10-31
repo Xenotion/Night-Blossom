@@ -330,9 +330,7 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 
 ![Portal Gif 2](Images/ShadersDemo/attack.gif)
 
-One of the particle systems used to improve the visuals of our game was the bleeding effect [Splatter](Assets/Objects/StunEffect.prefab) 
-
-used on the enemy. When the enemy becomes stunned, an initial burst of blood particles is created around the enemy, followed by a continuous and random dispersion of blood particles from the base of the enemy model. This effect serves as a clear and engaging feedback mechanism, communicating to the player that their actions have successfully impacted the enemy, hence improving the game's overall responsiveness.
+One of the particle systems used to improve the visuals of our game was the [bleeding splatter effect](Assets/Objects/StunEffect.prefab) used on the enemy. When the enemy becomes stunned, an initial burst of blood particles is created around the enemy, followed by a continuous and random dispersion of blood particles from the base of the enemy model. This effect serves as a clear and engaging feedback mechanism, communicating to the player that their actions have successfully impacted the enemy, hence improving the game's overall responsiveness.
 
 Attrobutes adjusted:
 
