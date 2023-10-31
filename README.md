@@ -330,6 +330,16 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 
 ![Portal Gif 2](Images/ShadersDemo/attack.gif)
 
+One of the particle systems used to improve the visuals of our game was the bleeding effect (insert link: Assets/Objects/StunEffect.prefab ) 
+[Portal Material](Assets/Material/StunEffect.prefab) 
+
+used on the enemy. When the enemy becomes stunned, an initial burst of blood particles is created around the enemy, followed by a continuous and random dispersion of blood particles from the base of the enemy model. This effect serves as a clear and engaging feedback mechanism, communicating to the player that their actions have successfully impacted the enemy, hence improving the game's overall responsiveness.
+
+Attrobutes adjusted:
+
+Randomness of particles basedon: 
+
+TO DO 
 
 
 ## Summary of Contributions
@@ -338,7 +348,6 @@ Objective: Build a 5 minute survival horror game
 <p align="middle">
   <img src="Images/Studio.png" width="400">
 </p>
-
 
 Developing a game with a three-member team demanded effective workload distribution. To ensure equitable division, an initial meeting was conducted to deliberate on each member's strengths and weaknesses. This discussion led to an understanding of individual preferences and skill sets, culminating in the subdivision of three primary sections: Design/Story, Gameplay, and Monster development. Although each member primarily focused on their designated area, they also contributed to other aspects when needed. This collaborative approach facilitated a well-timed and proficient project completion, enabling every team member to showcase their expertise.
 
