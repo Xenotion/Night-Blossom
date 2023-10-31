@@ -135,7 +135,94 @@ This allows for even contribution and members will help and contribute to the ot
 
 ## Evaluation Report
 
-TODO (due milestone 3) - see specification for details
+**Evaluation Report**
+
+The main goal of our evaluation was to improve “Night Blossom” by utilising feedback from real life players. Here we used the Query evaluation technique through asking a very carefully selected group of people to answer a range of questions. 
+
+**1.0 Participants/Demographic information**
+
+Our players were carefully selected among a bunch in order to ensure the most useful information for our target audience. We specifically search for gamers who were into the horror genre and had played a horror game at least once in the past year.
+
+New gamers, casual gamers and hardcore were chosen to help Night Blossom target a wider audience. In this case hardcore indicated playing games daily or every two days. Casual was at least once a fortnight and then new gamers indicated those who only played very solemnly (once a month or less).
+
+ Of the 15 players chosen, 4 chosen were **new**,  7 were **casual** gamers and 4  considered themselves more **hardcore**. 
+
+<p align="middle">
+  <img src="Images/Demographic.png" width="400">
+</p>
+
+Both genders were equally chosen with 8 identifying as male and 7 identifying as female.
+
+
+**Data**
+
+**1.2 Data collection**
+
+A google form was sent to 15 gamers who played the game. We asked about: 
+
+**Demographic information:** As shown above. Players are asked about experience as a gamer (new, casual, hardcore) and the gender at which they identify. 
+
+**Completion status:** If they were able to survive the 5 minutes or not. Answered with a yes or no.
+
+**Ratings and feedback:** Overall satisfaction and enjoyment of the game on a scale from 1 to 5.
+
+**Fear factor:** Rating whether or not the horror theme was implemented well or not from 1 to 5.
+
+**Number of tries to win:** How many plays until a player won (if they managed to within a reasonable amount of tries)
+
+**How many times were you hit if you won?** From 0 to 2 as 3 hits indicates the player has lost the game.
+
+**What could we improve on?** Short answer allowing players to add any additional comments and advice.
+
+
+**3.0 Data Analysis**
+
+**3.1 Quantitative Analysis**
+
+**Survival rate:** Night Blossom had a survival rate or otherwise completion rate of 85.7% indicating the game is within a reasonable enough difficulty.
+
+<p align="middle">
+  <img src="Images/Success rate.png" width="400">
+</p>
+
+**Ratings and feedback:** Overall rates average at 4.7 out of 5 indicating the players enjoyed their overall experience and gameplay of Night blossom.
+
+**Fear factor:** Overall rates average 3.7 out of 5 indicating the game was scary but with a decent room for improvement.
+
+
+**Difficulty:**
+
+**Number of tries to complete:** 
+The average number of tries to complete the game was **2.7** indicating a moderate level of challenge. Players typically required multiple attempts to succeed, suggesting a balanced level of difficulty that encourages replay. 
+
+**How many times were you hit if you won?** 
+Among players who were able to win the game, they were hit on average **1.2** highlighting an expecting number of encounters. This underscores that successful players navigated the game efficiently once they were able to play a few times ( as indicated with previous number of tries to complete).
+
+
+
+**5.2 Qualitative Analysis**
+
+**Open feedback:** What could be improved on?
+
+**Gameplay:** A player mentioned that the game was too repetitive and suggested item spawns could be randomised. This was taken into consideration by Team Slay and adopted for milestone 3 to allow for more difficulty and replayability.
+
+
+**Story:** One player asked to add more story which we took note of. Story was in the works of expanding regardless however we pushed it to be further priority.
+
+**Fear factor:** Majority of comments made were about fear factor and mentioned adding more scary features such as jumpscares and more. This was taken strongly in consideration as the main focus of the game is the horror and fear aspect.
+
+
+**Improvements and changes for game:**
+
+**Gameplay:** Items will now be randomised allowing for replayability and more difficulty 
+
+**Story:** More dialogue has been added and a final ending cutscene to finalise and wrap up the game added
+
+**Fear factor:** Multiple features were added here. Jumpscares were added at points the players picked items to create a sense of vulnerability and intensity. Moreover more sound effects including increasing heart beat around monster and jumpscare sounds added. Screen distortion was added upon damage creating further fear among players. 
+
+**Conclusion:**
+
+Overall the evaluation process served as a critical juncture in the games development. It offered a more profound understanding of how to improve NIght Blossom including any possible bugs and issues that we may not have spotted in our game plays. The insights from this assessment became instrumental in guiding our next processes and in refining the game enabling us to implement targeted enhancements and optimizations that significantly contributed to the overall player experience of Night Blossom.
 
 ## Shaders and Special Effects
 
