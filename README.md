@@ -321,7 +321,7 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 Objective: Build a 5 minute survival horror game 
 
 <p align="middle">
-  <img src="Images/Slay Game studios.png" width="400">
+  <img src="Images/Studios.png" width="400">
 </p>
 
 
