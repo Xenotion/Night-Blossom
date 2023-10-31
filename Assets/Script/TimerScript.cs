@@ -9,7 +9,6 @@ public class Timer : MonoBehaviour
     public float timerDuration = 10.0f; // 5 minutes in seconds
     private float remainingTime;
     private TextMeshProUGUI timerText; // Using TextMeshProUGUI instead of Text
-    public GameObject victoryText;
 
     [Header("Player Settings")]
     public MonoBehaviour playerController; // Reference to the player controller script
@@ -20,7 +19,6 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        victoryText.gameObject.SetActive(false);
         remainingTime = timerDuration;
         timerText = GetComponent<TextMeshProUGUI>();
     }

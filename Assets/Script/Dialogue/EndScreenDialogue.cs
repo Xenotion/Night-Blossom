@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI textComponent2;
+    public GameObject dialogueBox;
     public AudioClip typingSound; // Assign a typing sound effect in the inspector
     public AudioSource audioSource; // Assign your AudioSource in the inspector
     public string paragraph; // A single string containing the entire paragraph
@@ -33,6 +35,10 @@ public class EndGame : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = paragraph; // Instantly display all text
             }
+        }
+
+        if (textComponent2.text == "Thank you for playing The Night Blossom!") {
+            Time.timeScale = 0f;
         }
     }
 
@@ -70,12 +76,9 @@ public class EndGame : MonoBehaviour
 
     void NextLine()
     {
+        dialogueBox.SetActive(true);
+        textComponent.enabled = false;
+        textComponent2.enabled = true;
 
-        SceneManager.LoadSceneAsync("StartScene", LoadSceneMode.Single);
-    }
-
-    void LoadStartScene()
-    {
-        SceneManager.LoadScene(0);
     }
 }
