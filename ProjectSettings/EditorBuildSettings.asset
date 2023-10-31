@@ -12,15 +12,15 @@ EditorBuildSettings:
     path: Assets/Scene/StartScene.unity
     guid: e058a1f765970f741a1495243c5b57b1
   - enabled: 1
-    path: Assets/Scene/NewMap/NewMainMenu.unity
+    path: Assets/Scene/StartScene.unity
     guid: a90994bd6287e74438c0c5526d0fabfe
   - enabled: 1
-    path: Assets/Scene/NewMap/NewMap.unity
+    path: Assets/Scene/MainMap.unity
     guid: 19cf03d80275f794bbeaa16e5e0f9744
   - enabled: 1
-    path: Assets/Scene/NewMap/OptionScene.unity
+    path: Assets/Scene/OptionScene.unity
     guid: 30072d46325336d4ca0b83e109a1e3f1
   - enabled: 1
-    path: Assets/Scene/NewMap/EndScreen.unity
+    path: Assets/Scene/EndScreen.unity
     guid: 564ed6068f1720440a20aa1d955a6fec
   m_configObjects: {}

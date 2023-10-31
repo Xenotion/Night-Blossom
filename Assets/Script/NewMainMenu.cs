@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator AsyncLoadGameScene()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("NewMap", LoadSceneMode.Single);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("MainMap", LoadSceneMode.Single);
         while (!asyncOperation.isDone)
         {
             yield return null; // Wait until the scene finishes loading

@@ -12,7 +12,8 @@ public class ChangeSceneButton : MonoBehaviour
 
     IEnumerator AsyncLoadGameScene()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("NewMainMenu", LoadSceneMode.Single);
+        Debug.Log("Button clicked");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("StartScene", LoadSceneMode.Single);
         while (!asyncOperation.isDone)
         {
             Time.timeScale = 1f;

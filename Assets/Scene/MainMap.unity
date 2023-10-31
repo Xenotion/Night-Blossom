@@ -11932,6 +11932,7 @@ MonoBehaviour:
   - I need to hide now!!
   - '[PICKING UP ORBS AROUND THE MAP AND PLACING ON BENCH WILL STUNT THE ENEMY]'
   - '[CLICK Q AND E TO PEEK]'
+  - '[P FOR PAUSE] '
   textSpeed: 0.1
 --- !u!114 &429660325
 MonoBehaviour:
