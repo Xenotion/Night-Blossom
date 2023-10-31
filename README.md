@@ -317,6 +317,17 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 
 ### TODO: Particle system
 
+
+![Blood Splatter](Images/ShadersDemo/attack particle.gif)
+
+
+
+
+
+
+
+
+
 ## Summary of Contributions
 Objective: Build a 5 minute survival horror game 
 
