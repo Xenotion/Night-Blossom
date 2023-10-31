@@ -148,7 +148,7 @@ New gamers, casual gamers and hardcore were chosen to help Night Blossom target 
  Of the 15 players chosen, 4 chosen were new,  7 were casual gamers and 4  considered themselves more hardcore. 
 
 <p align="middle">
-  <img src="Demographic.png" width="400">
+  <img src="Images/Demographic.png" width="400">
 </p>
 
 Both genders were equally chosen with 8 identifying as male and 7 identifying as female.
