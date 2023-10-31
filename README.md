@@ -317,12 +317,7 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 
 ### TODO: Particle system
 
-
-![Particle](Images/ShadersDemo/attack particle.gif)
-
-
-
-
+![Portal Gif 2](Images/ShadersDemo/attack.gif)
 
 
 
