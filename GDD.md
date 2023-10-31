@@ -89,13 +89,13 @@ The game offers a first-person perspective, immersing players directly into the 
 
 #### 3.2 Controls:
 
-- W, A, S, D: Movement controls.
+- W, A, S, D: Movement controls
 - Q, E: peeking mechanism 
-- Mouse: Look around/aim.
+- Mouse: Look around/aim
 - F: Interact with an object
-- Spacebar: Jump.
-- Shift: Run (limited stamina to prevent overuse).
-- ESC: Pause menu.
+- Spacebar: Jump
+- Shift: Run
+- P: Pause menu
 
 The interaction is intuitive. Approach an object, if it’s interactable, an icon will appear, prompting the player to press F or left mouse button.
 
@@ -121,11 +121,7 @@ The player is rewarded with easter eggs and secrets when collecting lore times, 
 
 #### 3.4 Gameplay Mechanics:
 
-Time Survival: A persistent 5-minute timer. The urgency pushes players to act quickly, balancing haste with careful observation.
-
-
-
-**Puzzle-solving**: This will include simply searching for orbs around the maze-like maps within the fog or a parkour puzzle that the player must complete before reaching the item.
+**Time Survival**: A persistent 5-minute timer. The urgency pushes players to act quickly, balancing haste with careful observation.
 
 **Stealth**: players need to avoid detection, using the environment to hide or player can peek around the corner to check for surroundings without being detected even if the player is in a line of sight of the villain
 
@@ -253,8 +249,6 @@ https://www.youtube.com/watch?v=_ovvWMq2SKw
 ## 6.0 User Interface (UI)
 
 **Main HUD (Head-Up Display) during gameplay:**
-
-**Stamina Bar**: A thin, translucent bar at the bottom-left corner that depletes as the player runs. It's designed to look like an ink-brush stroke, fading as stamina decreases.
 	
 Main HUD will follow the generic aesthetic of the usual game Minecraft’s UI as It tends to contain all the necessary information with simplicity. However, we plan on changing the overall UI aesthetics to a more subtle horror theme with less rigidity to give the player a sense of unbalance and lurking fear while playing the game. 
 
@@ -268,9 +262,6 @@ Main HUD will follow the generic aesthetic of the usual game Minecraft’s UI as
 - Background: undecided but something happy and positive yet subtle hint of darkness/horror for the game theme
 - Options listed vertically on the left, written in elegant calligraphy:
   - Start Game
-  - Options
-  - Credits	
-  - Exit
 
 Each option, when hovered over, will be highlighted in a certain manner. 
 
@@ -279,9 +270,7 @@ Each option, when hovered over, will be highlighted in a certain manner.
 - A semi-transparent black overlay dims the game in the background.
 - Options listed in the centre:
   - Resume
-  - Options
   - Main Menu
-  - Quit
 
 The overall menu options aesthetic will follow as  with the subtle white and glowy text with interesting font creates a vibe that can potentially make the player uncomfortable before starting the game. However, we are planning on giving the menu UI a twist where the major aesthetic will be pleasant and oriental, while hiding hints of contrasting elements to contain the overall theme of the game. We will be incorporating a lot of asian/japanese theme design which represents the game’s direction. 
 
