@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float knockbackForce = 20f;
     public float slowSpeed = 2.5f;
     public float slowDuration = 2f;
+    public AudioSource jumpscare;
 
     // Camera shake variables
     public Transform cameraTransform;
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         gameOverText.gameObject.SetActive(false);
+        jumpscare.Stop();
         playerMovement = GetComponent<PlayerMovement>();
         
         if (cameraTransform != null)
@@ -37,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damageAmount, Vector3 attackerPosition)
     {
         Debug.Log("Player attacked");
-
+        jumpscare.Play();
         // Knockback effect
         Vector3 knockbackDirection = (transform.position - attackerPosition).normalized;
         playerMovement.ApplyKnockback(knockbackDirection, knockbackForce, 0.5f);
@@ -109,5 +111,10 @@ public class PlayerHealth : MonoBehaviour
 
         // Stop the scene from running
         Time.timeScale = 0f;
+    }
+
+    public int getHealth() {
+        return health;
+
     }
 }

@@ -3,7 +3,10 @@ guid: ac45db74f39304f1fa7450fbc9d85643
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - postProcessVolume: {instanceID: 0}
+  - damageSound: {instanceID: 0}
+  - damageClip: {fileID: 8300000, guid: 3cc16247d1ce53746a44c22fa20bb3b3, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
