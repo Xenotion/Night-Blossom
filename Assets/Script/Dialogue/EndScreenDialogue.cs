@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
@@ -69,6 +70,12 @@ public class EndGame : MonoBehaviour
 
     void NextLine()
     {
-        // gameObject.SetActive(false); // If the entire paragraph is displayed, hide the text box.
+
+        SceneManager.LoadSceneAsync("StartScene", LoadSceneMode.Single);
+    }
+
+    void LoadStartScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
