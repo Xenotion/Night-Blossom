@@ -326,7 +326,7 @@ Fragment Shader
 
 The fragment shader takes the distorted on-screen positions, and finds the corresponding texture behind the object, tinting it based on the material colour and transparency to use as the final color of the fragment. The resulting effect is portals that appear distorted in multiple dimensions, with a transparent/undistorted part facing the player, creating a mysterious yet inviting look.
 
-### TODO: Particle system
+### Particle system
 
 ![Portal Gif 2](Images/ShadersDemo/attack.gif)
 
@@ -334,9 +334,9 @@ One of the particle systems used to improve the visuals of our game was the [ble
 
 The attributes adjusted are:
 - Gravity: gravity is added to make the particle movement more realistic
-- Emission: Adjusted rate over time and added burst to create a convincing ‘bleeding’ effect
+- Speed: adjusted to make particles travel an appropriate distance before disappearing
+- Emission: adjusted rate over time and added burst to create a convincing ‘bleeding’ effect
 - Shape: adjusted to match the size of the enemy
-- Collision: changed so that blood particles collide with the ground 
 - Renderer: changed material & size to make it render particles that mimic blood 
 
 In addition, the location and direction of the particle emissions are randomised, with the auto random seed option turned on, making the effect more dynamic and less repetitive.
