@@ -332,11 +332,14 @@ The fragment shader takes the distorted on-screen positions, and finds the corre
 
 One of the particle systems used to improve the visuals of our game was the [bleeding splatter effect](Assets/Objects/StunEffect.prefab) used on the enemy. When the enemy becomes stunned, an initial burst of blood particles is created around the enemy, followed by a continuous and random dispersion of blood particles from the base of the enemy model. This effect serves as a clear and engaging feedback mechanism, communicating to the player that their actions have successfully impacted the enemy, hence improving the game's overall responsiveness.
 
-Attrobutes adjusted:
+The attributes adjusted are:
+- Gravity: gravity is added to make the particle movement more realistic
+- Emission: Adjusted rate over time and added burst to create a convincing ‘bleeding’ effect
+- Shape: adjusted to match the size of the enemy
+- Collision: changed so that blood particles collide with the ground 
+- Renderer: changed material & size to make it render particles that mimic blood 
 
-Randomness of particles based on: 
-
-TO DO 
+In addition, the location and direction of the particle emissions are randomised, with the auto random seed option turned on, making the effect more dynamic and less repetitive.
 
 
 ## Summary of Contributions
